@@ -3,14 +3,14 @@
   "providers": [
     {
       "title": "Hub",
-      "ProviderType": "html",
+      "providerType": "html",
       "data": {
-        "PaginationUrlTemplate": "https://www.pornhub.com/vr?page={0}",
-        "VideoPageUrlTemplate": "https://www.pornhub.com{0}",
-        "LinksCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a",
-        "ImagesCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a > img",
-        "TitlesCssSelector": "#videoCategory > li.pcVideoListItem span.title > a",
-        "PagesCount": 79
+        "paginationUrlTemplate": "https://www.pornhub.com/vr?page={0}",
+        "videoPageUrlTemplate": "https://www.pornhub.com{0}",
+        "linksCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a",
+        "imagesCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a > img",
+        "titlesCssSelector": "#videoCategory > li.pcVideoListItem span.title > a",
+        "pagesCount": 79
       }
     }
   ]
