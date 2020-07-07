@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alexey Suvorov</title>
-    <link>https://asuvorov.me/</link>
+    <link>https://alexeysuvorov.github.io/</link>
     <description>Recent content on Alexey Suvorov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 May 2019 18:30:19 +0100</lastBuildDate>
     
-	<atom:link href="https://asuvorov.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alexeysuvorov.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What to Avoid When You Do Job Test</title>
-      <link>https://asuvorov.me/posts/what-to-avoid-when-you-do-job-test/</link>
+      <link>https://alexeysuvorov.github.io/posts/what-to-avoid-when-you-do-job-test/</link>
       <pubDate>Sat, 11 May 2019 18:30:19 +0100</pubDate>
       
-      <guid>https://asuvorov.me/posts/what-to-avoid-when-you-do-job-test/</guid>
+      <guid>https://alexeysuvorov.github.io/posts/what-to-avoid-when-you-do-job-test/</guid>
       <description>I interview software engineers past 11 years, and last four years, I have an average 1-2 interview per week. We usually don’t send a test to people with the experience we can easily confirm on an interview or by a background check, but for candidates with no or little experience, it is ok to send a test. Usually, the test takes less than 4 hours of development from start to end.</description>
     </item>
     
     <item>
       <title>How This Site Made and Site Generators</title>
-      <link>https://asuvorov.me/posts/how-this-site-made-and-site-generators/</link>
+      <link>https://alexeysuvorov.github.io/posts/how-this-site-made-and-site-generators/</link>
       <pubDate>Fri, 10 May 2019 22:18:20 +0100</pubDate>
       
-      <guid>https://asuvorov.me/posts/how-this-site-made-and-site-generators/</guid>
+      <guid>https://alexeysuvorov.github.io/posts/how-this-site-made-and-site-generators/</guid>
       <description>The older I become, the less I search for maximum fresh solutions. Some solutions should be just good enough, even if far from perfect.
 For web site like a blog or personal page Wordpress or another CMS with dynamic content, generation is just not needed. Also, it is good not to pay when you can (there is always a better place to use your money than Amazon or your domestic hosting provider).</description>
     </item>
