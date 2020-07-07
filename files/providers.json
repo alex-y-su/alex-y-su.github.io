@@ -1,0 +1,17 @@
+{
+  "schema": "v1",
+  "providers": [
+    {
+      "title": "Hub",
+      "ProviderType": "html",
+      "data": {
+        "PaginationUrlTemplate": "https://www.pornhub.com/vr?page={0}",
+        "VideoPageUrlTemplate": "https://www.pornhub.com{0}",
+        "LinksCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a",
+        "ImagesCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a > img",
+        "TitlesCssSelector": "#videoCategory > li.pcVideoListItem span.title > a",
+        "PagesCount": 79
+      }
+    }
+  ]
+}
