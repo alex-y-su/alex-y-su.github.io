@@ -13,6 +13,19 @@
         "titlesCssSelector": "ol.js-browse_list > li > a div.l-ellipsis",
         "pagesCount": 9
       }
+    },
+    {
+      "title": "Hub",
+      "image": "https://ci.phncdn.com/www-static/images/movie-box/logo.png",
+      "providerType": "html",
+      "data": {
+        "paginationUrlTemplate": "https://www.pornhub.com/vr?page={0}",
+        "videoPageUrlTemplate": "https://www.pornhub.com{0}",
+        "linksCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a",
+        "imagesCssSelector": "#videoCategory > li.pcVideoListItem div.phimage > a > img",
+        "titlesCssSelector": "#videoCategory > li.pcVideoListItem span.title > a",
+        "pagesCount": 79
+      }
     }
   ]
 }
