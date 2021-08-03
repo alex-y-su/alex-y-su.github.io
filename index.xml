@@ -6,11 +6,7 @@
     <description>Recent content on Alexey Suvorov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2019 18:30:19 +0100</lastBuildDate>
-    
-	<atom:link href="https://alexeysuvorov.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 11 May 2019 18:30:19 +0100</lastBuildDate><atom:link href="https://alexeysuvorov.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What to Avoid When You Do Job Test</title>
       <link>https://alexeysuvorov.github.io/posts/what-to-avoid-when-you-do-job-test/</link>
@@ -28,6 +24,18 @@
       <guid>https://alexeysuvorov.github.io/posts/how-this-site-made-and-site-generators/</guid>
       <description>The older I become, the less I search for maximum fresh solutions. Some solutions should be just good enough, even if far from perfect.
 For web site like a blog or personal page Wordpress or another CMS with dynamic content, generation is just not needed. Also, it is good not to pay when you can (there is always a better place to use your money than Amazon or your domestic hosting provider).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://alexeysuvorov.github.io/anouncements/bd-2021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alexeysuvorov.github.io/anouncements/bd-2021/</guid>
+      <description>Приглашение Всем привет. Вы получили эту ссылку потому что я хотел бы пригласить вас на небольшую дружесткую встречу на 6-8 человек.
+Когда  2021-08-04 21:00
+ Опаздывать можно
+Где View Larger Map Пререквизиты  Подарок не нужен Пара часов свободного времени Терпимость к кальяну  </description>
     </item>
     
   </channel>
