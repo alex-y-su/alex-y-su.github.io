@@ -1,38 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alexey Suvorov</title>
-    <link>https://alexeysuvorov.github.io/</link>
-    <description>Recent content on Alexey Suvorov</description>
+    <title>Alex Su ⌗ personal</title>
+    <link>/</link>
+    <description>Recent content on Alex Su ⌗ personal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jan 2022 11:31:18 +0300</lastBuildDate><atom:link href="https://alexeysuvorov.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 17:46:20 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Iframe</title>
-      <link>https://alexeysuvorov.github.io/posts/iframe/</link>
-      <pubDate>Fri, 28 Jan 2022 11:31:18 +0300</pubDate>
+      <title>About author</title>
+      <link>/about/</link>
+      <pubDate>Thu, 23 Feb 2023 17:46:20 +0800</pubDate>
       
-      <guid>https://alexeysuvorov.github.io/posts/iframe/</guid>
-      <description>  </description>
+      <guid>/about/</guid>
+      <description>Know how things works.</description>
+    </item>
+    
+    <item>
+      <title>ChatGPT, LLMs and Black Boxes</title>
+      <link>/posts/chatgpt-gpt3-llm/</link>
+      <pubDate>Thu, 23 Feb 2023 17:46:20 +0800</pubDate>
+      
+      <guid>/posts/chatgpt-gpt3-llm/</guid>
+      <description>Large language models (LLMs) like GPT-3 can be incredibly helpful tools for generating text quickly and accurately. However, it&amp;rsquo;s important to remember that LLMs are not sentient beings and they don&amp;rsquo;t truly understand the meaning behind the language they generate. Instead, they use mathematical models to predict the most likely response based on their training data. To use LLMs effectively, it&amp;rsquo;s important to be mindful of the data that&amp;rsquo;s being used to train them.</description>
+    </item>
+    
+    <item>
+      <title>How to install chromium on Mac M1 using homebrew</title>
+      <link>/posts/install-chromium-on-mac-m1-usgin-brew/</link>
+      <pubDate>Sun, 05 Jun 2022 18:30:19 +0100</pubDate>
+      
+      <guid>/posts/install-chromium-on-mac-m1-usgin-brew/</guid>
+      <description>It not as easy as it seems on first look, but:
+zsh brew install --cask chromium sudo xattr -r -d com.apple.quarantine /Applications/Chromium.app </description>
     </item>
     
     <item>
       <title>What to Avoid When You Do Job Test</title>
-      <link>https://alexeysuvorov.github.io/posts/what-to-avoid-when-you-do-job-test/</link>
+      <link>/posts/what-to-avoid-when-you-do-job-test/</link>
       <pubDate>Sat, 11 May 2019 18:30:19 +0100</pubDate>
       
-      <guid>https://alexeysuvorov.github.io/posts/what-to-avoid-when-you-do-job-test/</guid>
-      <description>I interview software engineers past 11 years, and last four years, I have an average 1-2 interview per week. We usually don’t send a test to people with the experience we can easily confirm on an interview or by a background check, but for candidates with no or little experience, it is ok to send a test. Usually, the test takes less than 4 hours of development from start to end.</description>
+      <guid>/posts/what-to-avoid-when-you-do-job-test/</guid>
+      <description>I&amp;rsquo;ve been interviewing software developers for 11 years, and for the last four years, I&amp;rsquo;ve averaged 1-2 interviews each week. We normally don&amp;rsquo;t send a test to persons whose experience we can readily validate in an interview or through a background check, but it is OK to send a test to applicants with no or little experience. From start to finish, the test usually takes less than 4 hours to construct.</description>
     </item>
     
     <item>
       <title>How This Site Made and Site Generators</title>
-      <link>https://alexeysuvorov.github.io/posts/how-this-site-made-and-site-generators/</link>
+      <link>/posts/how-this-site-made-and-site-generators/</link>
       <pubDate>Fri, 10 May 2019 22:18:20 +0100</pubDate>
       
-      <guid>https://alexeysuvorov.github.io/posts/how-this-site-made-and-site-generators/</guid>
-      <description>The older I become, the less I search for maximum fresh solutions. Some solutions should be just good enough, even if far from perfect.
-For web site like a blog or personal page Wordpress or another CMS with dynamic content, generation is just not needed. Also, it is good not to pay when you can (there is always a better place to use your money than Amazon or your domestic hosting provider).</description>
+      <guid>/posts/how-this-site-made-and-site-generators/</guid>
+      <description>The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
+For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).
+HUGO (https://gohugo.io) generates this side statically.</description>
     </item>
     
   </channel>
