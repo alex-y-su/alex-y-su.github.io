@@ -56,5 +56,15 @@ For a website with dynamic material, such as a blog or personal page, generation
 HUGO (https://gohugo.io) generates this side statically.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://alex-y-su.github.io/posts/ai-consistency-challenges-and-solutions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex-y-su.github.io/posts/ai-consistency-challenges-and-solutions/</guid>
+      <description>Consistency in AI: Challenges and Solutions
+One of the primary challenges confronting current AI models, especially the transformer-based ones, is the ability to ensure consistent results. While it&amp;rsquo;s a recognized fact that these models might produce different outputs for identical datasets, it&amp;rsquo;s crucial to differentiate between consistency and determinism. Determinism, in a computational context, means that given the same initial conditions, the algorithm will produce the same results every time. However, inherent randomness during training can introduce variability.</description>
+    </item>
+    
   </channel>
 </rss>
