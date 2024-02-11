@@ -65,5 +65,17 @@ For a website with dynamic material, such as a blog or personal page, generation
 HUGO (https://gohugo.io) generates this side statically.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://alex-y-su.github.io/posts/ai-for-business-is-here-to-stay/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex-y-su.github.io/posts/ai-for-business-is-here-to-stay/</guid>
+      <description>Embracing the Future: Why AI Is More Than Just a Hype Short version Quick and Smart Information Access:
+AI, especially Large Language Models (LLMs), delivers fast and accurate search results. Understands user queries better than traditional search engines. Overcoming the Blank Page Syndrome:
+AI suggests simple steps to start big tasks, making it easier to begin work. Acts as a helpful nudge against procrastination. Economical for Work:
+AI is cost-effective, offering significant time savings for a fraction of the cost.</description>
+    </item>
+    
   </channel>
 </rss>
