@@ -1,100 +1,83 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Alex Su ⌗ personal</title>
     <link>https://alex-y-su.github.io/</link>
     <description>Recent content on Alex Su ⌗ personal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 19 Feb 2024 13:46:20 +0800</lastBuildDate><atom:link href="https://alex-y-su.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Feb 2024 13:46:20 +0800</lastBuildDate>
+    <atom:link href="https://alex-y-su.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prompt Engineering: A Competitive Edge</title>
       <link>https://alex-y-su.github.io/posts/prompt-engineering-a-competitive-edge/</link>
       <pubDate>Mon, 19 Feb 2024 13:46:20 +0800</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/prompt-engineering-a-competitive-edge/</guid>
       <description>Prompt Engineering: A Competitive Edge As an employer and a leader who utilizes AI regularly, I have seen firsthand why prompt engineering is becoming a must-have skill.
 Hiring for Initiative Candidates skilled at prompting immediately stand out in job interviews nowadays. With AI assistants handling lots of routine tasks, I&amp;rsquo;m looking for self-starters who can maximize productivity from day one. Prompt literacy demonstrates that - rather than needing detailed instructions, these employees take charge to translate goals into crisp prompts that extract the most value from AI.</description>
     </item>
-    
     <item>
       <title>Embracing the Future: Why AI Is More Than Just a Hype</title>
       <link>https://alex-y-su.github.io/posts/ai-for-business-is-here-to-stay/</link>
       <pubDate>Sun, 11 Feb 2024 17:46:20 +0800</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/ai-for-business-is-here-to-stay/</guid>
       <description>Embracing the Future: Why AI Is More Than Just a Hype Short version Quick and Smart Information Access:
 AI, especially Large Language Models (LLMs), delivers fast and accurate search results. Understands user queries better than traditional search engines. Overcoming the Blank Page Syndrome:
 AI suggests simple steps to start big tasks, making it easier to begin work. Acts as a helpful nudge against procrastination. Economical for Work:
 AI is cost-effective, offering significant time savings for a fraction of the cost.</description>
     </item>
-    
     <item>
       <title>Consistency in AI: Challenges and Solutions</title>
       <link>https://alex-y-su.github.io/posts/ai-consistency-challenges-and-solutions/</link>
       <pubDate>Sat, 21 Oct 2023 17:46:20 +0800</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/ai-consistency-challenges-and-solutions/</guid>
       <description>One of the primary challenges confronting current AI models, especially the transformer-based ones, is the ability to ensure consistent results. While it&amp;rsquo;s a recognized fact that these models might produce different outputs for identical datasets, it&amp;rsquo;s crucial to differentiate between consistency and determinism. Determinism, in a computational context, means that given the same initial conditions, the algorithm will produce the same results every time. However, inherent randomness during training can introduce variability.</description>
     </item>
-    
     <item>
       <title>The Convergence of Business Processing Systems and Marketing: The Future of AI-Driven Marketing Automation</title>
       <link>https://alex-y-su.github.io/posts/bpm-as-present-of-marketing-automation/</link>
       <pubDate>Fri, 31 Mar 2023 11:46:20 +0800</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/bpm-as-present-of-marketing-automation/</guid>
       <description>As times goes by the lines between different business processes have started to blur. One such area where this is increasingly evident is the intersection of business processing systems and marketing.
 The Overlap Between Business Processing Systems and Marketing It&amp;rsquo;s quite intuitive to view marketing processes as an extension of general business processes. While there are occasional exceptions, such as viral marketing phenomena, the majority of marketing work hours are spent following a fairly deterministic execution flow.</description>
     </item>
-    
     <item>
       <title>About author</title>
       <link>https://alex-y-su.github.io/about/</link>
       <pubDate>Thu, 23 Feb 2023 17:46:20 +0800</pubDate>
-      
       <guid>https://alex-y-su.github.io/about/</guid>
       <description>Know how things works.</description>
     </item>
-    
     <item>
       <title>ChatGPT, LLMs and Black Boxes</title>
       <link>https://alex-y-su.github.io/posts/chatgpt-gpt3-llm/</link>
       <pubDate>Thu, 23 Feb 2023 17:46:20 +0800</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/chatgpt-gpt3-llm/</guid>
       <description>Large language models (LLMs) like GPT-3 can be incredibly helpful tools for generating text quickly and accurately. However, it&amp;rsquo;s important to remember that LLMs are not sentient beings and they don&amp;rsquo;t truly understand the meaning behind the language they generate. Instead, they use mathematical models to predict the most likely response based on their training data. To use LLMs effectively, it&amp;rsquo;s important to be mindful of the data that&amp;rsquo;s being used to train them.</description>
     </item>
-    
     <item>
       <title>How to install chromium on Mac M1 using homebrew</title>
       <link>https://alex-y-su.github.io/posts/install-chromium-on-mac-m1-usgin-brew/</link>
       <pubDate>Sun, 05 Jun 2022 18:30:19 +0100</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/install-chromium-on-mac-m1-usgin-brew/</guid>
       <description>It not as easy as it seems on first look, but:
-zsh brew install --cask chromium sudo xattr -r -d com.apple.quarantine /Applications/Chromium.app </description>
+brew install --cask chromium sudo xattr -r -d com.apple.quarantine /Applications/Chromium.app </description>
     </item>
-    
     <item>
       <title>What to Avoid When You Do Job Test</title>
       <link>https://alex-y-su.github.io/posts/what-to-avoid-when-you-do-job-test/</link>
       <pubDate>Sat, 11 May 2019 18:30:19 +0100</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/what-to-avoid-when-you-do-job-test/</guid>
       <description>I&amp;rsquo;ve been interviewing software developers for 11 years, and for the last four years, I&amp;rsquo;ve averaged 1-2 interviews each week. We normally don&amp;rsquo;t send a test to persons whose experience we can readily validate in an interview or through a background check, but it is OK to send a test to applicants with no or little experience. From start to finish, the test usually takes less than 4 hours to construct.</description>
     </item>
-    
     <item>
       <title>How This Site Made and Site Generators</title>
       <link>https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/</link>
       <pubDate>Fri, 10 May 2019 22:18:20 +0100</pubDate>
-      
       <guid>https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/</guid>
       <description>The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
 For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).
 HUGO (https://gohugo.io) generates this side statically.</description>
     </item>
-    
   </channel>
 </rss>
