@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Alex Su ⌗ personal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Feb 2024 13:46:20 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Feb 2024 02:46:20 +0800</lastBuildDate>
     <atom:link href="https://alex-y-su.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond ChatGPT: OpenAI&#39;s Rumored Foray into Advanced Browser Agents</title>
+      <link>https://alex-y-su.github.io/posts/openai-agents-2-0-browser-automation/</link>
+      <pubDate>Sat, 24 Feb 2024 02:46:20 +0800</pubDate>
+      <guid>https://alex-y-su.github.io/posts/openai-agents-2-0-browser-automation/</guid>
+      <description>Beyond ChatGPT: OpenAI&amp;rsquo;s Rumored Foray into Advanced Browser Agents Introduction to Agents 2.0 Recent rumors have sparked curiosity about OpenAI potentially developing new technology called Agent 2.0. This tool is supposed to allow language models greater control over web browsers to automate tasks across the internet without utilizing the API of internet services. The core premise around Agent 2.0 is enabling LLMs to interact with and control browsers more flexibly to automate activities spanning various websites and web apps.</description>
+    </item>
     <item>
       <title>Prompt Engineering: A Competitive Edge</title>
       <link>https://alex-y-su.github.io/posts/prompt-engineering-a-competitive-edge/</link>
