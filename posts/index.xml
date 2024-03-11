@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Alex Su ⌗ personal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Mar 2024 04:42:20 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2024 04:42:20 +0800</lastBuildDate>
     <atom:link href="https://alex-y-su.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unleashing the Full Potential of AI: Crafting Code for Language Models</title>
+      <link>https://alex-y-su.github.io/posts/how-to-code-for-llm/</link>
+      <pubDate>Mon, 11 Mar 2024 04:42:20 +0800</pubDate>
+      <guid>https://alex-y-su.github.io/posts/how-to-code-for-llm/</guid>
+      <description>Unleashing the Full Potential of AI: Crafting Code for Language Models In the ever-evolving technological realm, integrating language models into software development has emerged as a game-changer. However, maximizing the benefits of this AI-driven approach requires a strategic mindset and meticulous coding practices. By embracing modularity, emphasizing automated testing, limiting dependencies, and harnessing clear naming conventions, we can pave the way for a seamless collaboration between human developers and language models.</description>
+    </item>
     <item>
       <title>The Dawn of Intuitive Technology: Reflecting on Jensen Huang&#39;s Vision</title>
       <link>https://alex-y-su.github.io/posts/the-dawn-of-intuitive-technology-jensen-huang-vision/</link>
