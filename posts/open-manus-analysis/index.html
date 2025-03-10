@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>OpenManus Project Analysis: An Open-Source AI Agent System | Alex Su ⌗ personal</title>
+<meta name="keywords" content="">
+<meta name="description" content="OpenManus Project Analysis
+Project Overview
+OpenManus is an open-source alternative to the Manus agent system, designed to enable users to create and run AI agents without requiring an invite code. The project was launched by a team from MetaGPT and aims to provide a simple yet powerful implementation for AI agents.
+Core Architecture
+The project follows a well-structured architecture with several key components:
+1. Agent System
+The agent system is built on a hierarchical class structure:">
+<meta name="author" content="Alex Su">
+<link rel="canonical" href="https://alex-y-su.github.io/posts/open-manus-analysis/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://alex-y-su.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://alex-y-su.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://alex-y-su.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://alex-y-su.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://alex-y-su.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://alex-y-su.github.io/posts/open-manus-analysis/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://alex-y-su.github.io/posts/open-manus-analysis/">
+  <meta property="og:site_name" content="Alex Su ⌗ personal">
+  <meta property="og:title" content="OpenManus Project Analysis: An Open-Source AI Agent System">
+  <meta property="og:description" content="OpenManus Project Analysis Project Overview OpenManus is an open-source alternative to the Manus agent system, designed to enable users to create and run AI agents without requiring an invite code. The project was launched by a team from MetaGPT and aims to provide a simple yet powerful implementation for AI agents.
+Core Architecture The project follows a well-structured architecture with several key components:
+1. Agent System The agent system is built on a hierarchical class structure:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-09T18:32:00-07:00">
+    <meta property="article:modified_time" content="2025-03-09T18:32:00-07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenManus Project Analysis: An Open-Source AI Agent System">
+<meta name="twitter:description" content="OpenManus Project Analysis
+Project Overview
+OpenManus is an open-source alternative to the Manus agent system, designed to enable users to create and run AI agents without requiring an invite code. The project was launched by a team from MetaGPT and aims to provide a simple yet powerful implementation for AI agents.
+Core Architecture
+The project follows a well-structured architecture with several key components:
+1. Agent System
+The agent system is built on a hierarchical class structure:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://alex-y-su.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "OpenManus Project Analysis: An Open-Source AI Agent System",
+      "item": "https://alex-y-su.github.io/posts/open-manus-analysis/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "OpenManus Project Analysis: An Open-Source AI Agent System",
+  "name": "OpenManus Project Analysis: An Open-Source AI Agent System",
+  "description": "OpenManus Project Analysis Project Overview OpenManus is an open-source alternative to the Manus agent system, designed to enable users to create and run AI agents without requiring an invite code. The project was launched by a team from MetaGPT and aims to provide a simple yet powerful implementation for AI agents.\nCore Architecture The project follows a well-structured architecture with several key components:\n1. Agent System The agent system is built on a hierarchical class structure:\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "OpenManus Project Analysis Project Overview OpenManus is an open-source alternative to the Manus agent system, designed to enable users to create and run AI agents without requiring an invite code. The project was launched by a team from MetaGPT and aims to provide a simple yet powerful implementation for AI agents.\nCore Architecture The project follows a well-structured architecture with several key components:\n1. Agent System The agent system is built on a hierarchical class structure:\nBaseAgent: The abstract foundation class that provides core functionality for state management, memory, and execution loops.\nManages agent state transitions Handles memory of conversations Implements the main execution loop Detects and handles stuck states ReActAgent: Extends BaseAgent with the Reasoning and Acting paradigm\nImplements the think-act cycle Provides abstract methods for thinking and acting ToolCallAgent: Extends ReActAgent with tool/function calling capabilities\nHandles tool execution and responses Manages special tools like terminate Provides robust error handling for tool calls Manus: The main agent implementation that inherits from ToolCallAgent\nIncludes a comprehensive set of tools Serves as the primary interface for user interactions 2. Flow System The flow system manages the execution of tasks:\nBaseFlow: Abstract base class for execution flows supporting multiple agents\nManages a collection of agents Provides interfaces for flow execution PlanningFlow: Implements a planning-based execution flow\nBreaks down tasks into steps Manages step execution and status tracking Provides plan creation, execution, and summarization FlowFactory: Factory pattern for creating different types of flows\nCurrently supports PlanningFlow 3. Tools The agent has access to various tools that extend its capabilities:\nPythonExecute: Executes Python code GoogleSearch: Performs web searches BrowserUseTool: Enables web browsing capabilities FileSaver: Saves files to disk Terminate: Ends the agent’s execution PlanningTool: Manages task planning and execution CreateChatCompletion: Generates text using LLMs Main Logic Flow The main execution flow works as follows:\nEntry Points:\nmain.py: Simple entry point that creates a Manus agent and runs it in a loop run_flow.py: More advanced entry point that uses the flow system for task execution Execution Process:\nUser inputs a prompt/task The system creates a plan using PlanningFlow (in run_flow.py) or directly executes via Manus agent (in main.py) For PlanningFlow, the task is broken down into steps that are executed sequentially Each step is executed by an appropriate agent (typically Manus) The agent uses its tools to complete the task Results are returned to the user Agent Execution Cycle:\nThe agent follows a ReAct (Reasoning and Acting) pattern: Think: Process the current state and decide what to do next Act: Execute the decided actions using available tools This cycle repeats until the task is completed or max steps are reached Key Features Tool-based Architecture: Modular design with various tools that can be added or modified Planning Capabilities: Breaking down complex tasks into manageable steps Multi-agent Support: The flow system supports multiple agents working together Memory Management: Agents maintain memory of conversations and actions State Management: Robust state tracking to handle execution flow Error Handling: Comprehensive error handling throughout the system Key Prompts The OpenManus project uses several key prompts to guide the planning and thinking capabilities of the agents:\nPlanning Prompts Planning System Prompt PLANNING_SYSTEM_PROMPT = \"\"\" You are an expert Planning Agent tasked with solving problems efficiently through structured plans. Your job is: 1. Analyze requests to understand the task scope 2. Create a clear, actionable plan that makes meaningful progress with the `planning` tool 3. Execute steps using available tools as needed 4. Track progress and adapt plans when necessary 5. Use `finish` to conclude immediately when the task is complete Available tools will vary by task but may include: - `planning`: Create, update, and track plans (commands: create, update, mark_step, etc.) - `finish`: End the task when complete Break tasks into logical steps with clear outcomes. Avoid excessive detail or sub-steps. Think about dependencies and verification methods. Know when to conclude - don't continue thinking once objectives are met. \"\"\" This prompt instructs the planning agent on how to analyze requests, create structured plans, execute steps, track progress, and conclude tasks. It emphasizes creating clear, actionable plans with logical steps and avoiding excessive detail.\nPlanning Next Step Prompt NEXT_STEP_PROMPT = \"\"\" Based on the current state, what's your next action? Choose the most efficient path forward: 1. Is the plan sufficient, or does it need refinement? 2. Can you execute the next step immediately? 3. Is the task complete? If so, use `finish` right away. Be concise in your reasoning, then select the appropriate tool or action. \"\"\" This prompt guides the agent on determining the next action based on the current state of the plan, helping it decide whether to refine the plan, execute the next step, or conclude the task.\nManus Agent Prompts Manus System Prompt SYSTEM_PROMPT = \"You are OpenManus, an all-capable AI assistant, aimed at solving any task presented by the user. You have various tools at your disposal that you can call upon to efficiently complete complex requests. Whether it's programming, information retrieval, file processing, or web browsing, you can handle it all.\" This prompt establishes the agent’s identity and capabilities, setting the foundation for its thinking process.\nManus Next Step Prompt NEXT_STEP_PROMPT = \"\"\"You can interact with the computer using PythonExecute, save important content and information files through FileSaver, open browsers with BrowserUseTool, and retrieve information using GoogleSearch. PythonExecute: Execute Python code to interact with the computer system, data processing, automation tasks, etc. FileSaver: Save files locally, such as txt, py, html, etc. BrowserUseTool: Open, browse, and use web browsers.If you open a local HTML file, you must provide the absolute path to the file. GoogleSearch: Perform web information retrieval Based on user needs, proactively select the most appropriate tool or combination of tools. For complex tasks, you can break down the problem and use different tools step by step to solve it. After using each tool, clearly explain the execution results and suggest the next steps. \"\"\" This prompt instructs the agent on how to select and use tools based on user needs, break down complex problems, and explain results.\nTool Call Prompts Tool Call System Prompt SYSTEM_PROMPT = \"You are an agent that can execute tool calls\" Tool Call Next Step Prompt NEXT_STEP_PROMPT = \"If you want to stop interaction, use `terminate` tool/function call.\" These prompts are simpler and focus on the agent’s ability to execute tool calls and how to terminate interaction.\nDynamic Execution Prompts In addition to static prompts, the system also generates dynamic prompts during execution. For example, in the PlanningFlow class, when executing a step:\nstep_prompt = f\"\"\" CURRENT PLAN STATUS: {plan_status} YOUR CURRENT TASK: You are now working on step {self.current_step_index}: \"{step_text}\" Please execute this step using the appropriate tools. When you're done, provide a summary of what you accomplished. \"\"\" This dynamically generated prompt provides context about the current plan status and specific step to be executed.\nTechnical Implementation The project is implemented in Python with asynchronous programming (using asyncio) for efficient execution. It uses Pydantic for data validation and LLMs (likely OpenAI’s GPT models based on the configuration) for generating responses and plans.\nThe codebase follows good software engineering practices with clear separation of concerns, abstraction, and inheritance to promote code reuse and maintainability.\nConfiguration OpenManus requires configuration for the LLM APIs it uses. The configuration is stored in a config.toml file in the config directory, which includes settings for:\nLLM model selection API endpoints and keys Generation parameters Installation and Usage The project can be installed using either conda or uv (recommended). After installation, users can run the agent using:\npython main.py For the unstable version with planning capabilities:\npython run_flow.py Project Roadmap According to the README, the project roadmap includes:\nEnhancing planning capabilities Introducing standardized evaluation metrics Expanding model adaptation Implementing containerized deployment Enriching example libraries Improving user experience through frontend/backend development Code Structure The main code structure is organized as follows:\napp/: Main application code agent/: Agent implementations base.py: Base agent class react.py: ReAct agent implementation toolcall.py: Tool-calling agent implementation manus.py: Main Manus agent flow/: Flow system implementations base.py: Base flow class planning.py: Planning flow implementation flow_factory.py: Factory for creating flows tool/: Tool implementations Various tools for different capabilities llm/: LLM integration schema/: Data schemas prompt/: Prompt templates config/: Configuration files examples/: Example use cases main.py: Main entry point run_flow.py: Alternative entry point with planning Default Tools OpenManus provides a set of default tools that agents can use to interact with the environment. Below are the function signatures and descriptions of these tools:\n# Execute bash commands in the terminal async def bash(command: str) -\u003e str: \"\"\" Execute a bash command in the terminal. Parameters: command: The bash command to execute. Can be empty to view additional logs when previous exit code is -1. Can be 'ctrl+c' to interrupt the currently running process. Returns: Command output or error message \"\"\" # End the interaction when the request is met or if the assistant cannot proceed async def terminate(status: str) -\u003e str: \"\"\" Terminate the interaction with success or failure status. Parameters: status: The finish status of the interaction (\"success\" or \"failure\") Returns: Confirmation message \"\"\" # View, create, and edit files with string replacement functionality async def str_replace_editor(command: str, path: str, old_str: str = None, new_str: str = None, content: str = None, line_num: int = None) -\u003e str: \"\"\" Custom editing tool for viewing, creating and editing files. Parameters: command: The operation to perform (\"view\", \"create\", \"str_replace\", \"insert\", \"undo_edit\") path: Path to the file or directory to operate on old_str: (For str_replace) Exact string to replace new_str: (For str_replace) New string to insert content: (For create/insert) Content to write line_num: (For insert) Line number to insert at Returns: File content, operation result, or error message \"\"\" # Create structured completions with specified output formatting async def create_chat_completion(response: str) -\u003e str: \"\"\" Creates a structured completion with specified output formatting. Parameters: response: The response text that should be delivered to the user Returns: Formatted response \"\"\" # Create and manage plans for solving complex tasks async def planning(command: str, plan_id: str = None, title: str = None, steps: list = None, step_index: int = None, status: str = None) -\u003e str: \"\"\" A planning tool for creating and managing plans for complex tasks. Parameters: command: The command to execute (\"create\", \"update\", \"list\", \"get\", \"set_active\", \"mark_step\", \"delete\") plan_id: Unique identifier for the plan title: Title for the plan steps: List of plan steps step_index: Index of the step to mark/update status: Status to set for a step (\"completed\", \"in_progress\", \"pending\") Returns: Plan information or operation result \"\"\" # Perform Google searches and return relevant links async def google_search(query: str, num_results: int = 10) -\u003e list: \"\"\" Perform a Google search and return a list of relevant links. Parameters: query: The search query to submit to Google num_results: The number of search results to return (default: 10) Returns: List of URLs matching the search query \"\"\" # Interact with a web browser to perform various actions async def browser_use(action: str, url: str = None, selector: str = None, index: int = None, text: str = None, js_code: str = None, tab_index: int = None, direction: str = None, amount: int = None) -\u003e str: \"\"\" Interact with a web browser to perform various actions. Parameters: action: The action to perform (\"navigate\", \"click\", \"input_text\", \"screenshot\", \"get_html\", \"get_text\", \"read_links\", \"execute_js\", \"scroll\", \"switch_tab\", \"new_tab\", \"close_tab\", \"refresh\") url: URL to navigate to selector: CSS selector for elements index: Element index for interaction text: Text to input js_code: JavaScript code to execute tab_index: Tab index to switch to direction: Scroll direction (\"up\", \"down\", \"left\", \"right\") amount: Amount to scroll Returns: Action result, page content, or error message \"\"\" # Execute Python code async def python_execute(code: str) -\u003e str: \"\"\" Execute Python code and return the result. Parameters: code: Python code to execute Returns: Execution result or error message \"\"\" # Save content to files async def file_saver(path: str, content: str) -\u003e str: \"\"\" Save content to a file. Parameters: path: Path where the file should be saved content: Content to write to the file Returns: Success message or error \"\"\" These tools provide agents with a wide range of capabilities, from executing commands and manipulating files to searching the web and interacting with browsers. The modular design of OpenManus makes it easy to extend with new tools or customize which tools are available to specific agent instances.\nOpenManus Execution Flow Overview The OpenManus project follows a hierarchical execution flow with multiple loops and decision points. The execution control combines both top-down orchestration and cyclical processing patterns. Below is a detailed breakdown of how execution flows through the system.\nMain Execution Paths There are two primary entry points to the system:\nSimple Execution Path (via main.py) Planning-based Execution Path (via run_flow.py) Detailed Execution Flow ┌─────────────────────────┐ │ User Input │ │ (Task/Request) │ └───────────┬─────────────┘ │ ▼ ┌─────────────────────────┐ │ Entry Point │ │ (main.py/run_flow.py) │ └───────────┬─────────────┘ │ ├───────────────────┐ │ │ ▼ ▼ ┌─────────────────────┐ ┌─────────────────────┐ │ Simple Path │ │ Planning Path │ │ (main.py) │ │ (run_flow.py) │ └─────────┬───────────┘ └──────────┬──────────┘ │ │ ▼ ▼ ┌─────────────────────┐ ┌─────────────────────┐ │ Manus Agent │ │ Flow Factory │ │ Initialization │ │ (Creates Flow) │ └─────────┬───────────┘ └──────────┬──────────┘ │ │ │ ▼ │ ┌─────────────────────┐ │ │ Planning Flow │ │ │ Initialization │ │ └──────────┬──────────┘ │ │ │ ▼ │ ┌─────────────────────┐ │ │ Create Initial │ │ │ Plan │ │ └──────────┬──────────┘ │ │ ▼ ▼ ┌─────────────────────┐ ┌─────────────────────┐ │ │ │ │ │ Agent Run Loop │◄─┤ Plan Step Loop │ │ │ │ │ └─────────┬───────────┘ └──────────┬──────────┘ │ │ ▼ │ ┌───────────────────────────────────┴──────────┐ │ │ │ Agent Step Cycle │ │ │ └───────────────────────┬──────────────────────┘ │ ▼ ┌─────────────────────────┐ │ Think Phase │ │ (Decision Making) │ └───────────┬─────────────┘ │ ▼ ┌─────────────────────────┐ │ Act Phase │ │ (Tool Execution) │ └───────────┬─────────────┘ │ ▼ ┌─────────────────────────┐ │ Tool Execution │ │ │ └───────────┬─────────────┘ │ │ ▼ ┌─────────────────────────┐ │ Result Processing │ │ │ └───────────┬─────────────┘ │ │ ▼ ┌─────────────────────────┐ │ Termination Check │ │ │ └───────────┬─────────────┘ │ │◄────────────┐ │ │ ▼ │ ┌───────────────┐ │ │ Finished? │─No──┘ └───────┬───────┘ │ │ Yes ▼ ┌─────────────────────────┐ │ Return Results │ │ to User │ └─────────────────────────┘ Execution Control Logic 1. Simple Execution Path (main.py) async def main(): agent = Manus() while True: # Main input loop try: prompt = input(\"Enter your prompt (or 'exit'/'quit' to quit): \") # [Input validation logic] await agent.run(prompt) # Agent execution except KeyboardInterrupt: break The simple path follows these steps:\nInitialize the Manus agent Enter an infinite loop for user input For each input, call agent.run() to process the request Continue until user exits 2. Planning-based Execution Path (run_flow.py) async def run_flow(): agents = {\"manus\": Manus()} while True: # Main input loop try: prompt = input(\"Enter your prompt (or 'exit' to quit): \") # [Input validation logic] # Create flow for planning flow = FlowFactory.create_flow( flow_type=FlowType.PLANNING, agents=agents, ) # Execute flow with timeout result = await asyncio.wait_for( flow.execute(prompt), timeout=3600, ) except KeyboardInterrupt: break The planning path follows these steps:\nInitialize agents dictionary with Manus agent Enter an infinite loop for user input For each input, create a PlanningFlow using FlowFactory Execute the flow with the prompt Continue until user exits 3. Flow Execution (PlanningFlow.execute) async def execute(self, input_text: str) -\u003e str: # Create initial plan await self._create_initial_plan(input_text) result = \"\" while True: # Plan step execution loop # Get current step self.current_step_index, step_info = await self._get_current_step_info() # Exit if no more steps if self.current_step_index is None: result += await self._finalize_plan() break # Execute current step with appropriate agent step_type = step_info.get(\"type\") executor = self.get_executor(step_type) step_result = await self._execute_step(executor, step_info) result += step_result + \"\\n\" # Check if agent wants to terminate if hasattr(executor, \"state\") and executor.state == AgentState.FINISHED: break return result The flow execution follows these steps:\nCreate an initial plan based on the input Enter a loop to process each plan step For each step, get the appropriate executor agent Execute the step and collect results Continue until all steps are completed or termination is requested 4. Agent Execution (BaseAgent.run) async def run(self, request: Optional[str] = None) -\u003e str: if request: self.update_memory(\"user\", request) results: List[str] = [] async with self.state_context(AgentState.RUNNING): while ( self.current_step \u003c self.max_steps and self.state != AgentState.FINISHED ): # Agent step execution loop self.current_step += 1 step_result = await self.step() # Check for stuck state if self.is_stuck(): self.handle_stuck_state() results.append(f\"Step {self.current_step}: {step_result}\") if self.current_step \u003e= self.max_steps: results.append(f\"Terminated: Reached max steps ({self.max_steps})\") return \"\\n\".join(results) The agent execution follows these steps:\nUpdate memory with the user request Enter a loop to execute steps until max_steps is reached or state is FINISHED For each iteration, call the step() method Check for and handle stuck states Collect results from each step Return the combined results 5. Agent Step Cycle (ReActAgent.step) async def step(self) -\u003e str: \"\"\"Execute a single step: think and act.\"\"\" should_act = await self.think() if not should_act: return \"Thinking complete - no action needed\" return await self.act() The agent step cycle follows these steps:\nCall think() to process current state and decide next action If thinking indicates action is needed, call act() to execute the action Return the result 6. Tool Execution (ToolCallAgent.act) async def act(self) -\u003e str: \"\"\"Execute tool calls and handle their results\"\"\" if not self.tool_calls: if self.tool_choices == \"required\": raise ValueError(TOOL_CALL_REQUIRED) return self.messages[-1].content or \"No content or commands to execute\" results = [] for command in self.tool_calls: result = await self.execute_tool(command) # Add tool response to memory tool_msg = Message.tool_message( content=result, tool_call_id=command.id, name=command.function.name ) self.memory.add_message(tool_msg) results.append(result) return \"\\n\\n\".join(results) The tool execution follows these steps:\nCheck if there are tool calls to execute For each tool call, execute the tool and collect the result Add the tool response to memory Return the combined results Key Control Flow Characteristics Multiple Nested Loops:\nOuter loop for user input processing Middle loop for plan step execution (in planning flow) Inner loop for agent step execution Each with their own termination conditions State-Based Control Flow:\nAgent states (IDLE, RUNNING, FINISHED, ERROR) control execution Plan step statuses (not_started, in_progress, completed, blocked) track progress Event-Driven Termination:\nExecution can be terminated by: User exit command Agent state changing to FINISHED Maximum steps reached Tool execution (e.g., Terminate tool) Timeout (in run_flow.py) Asynchronous Execution:\nAll main execution functions are asynchronous (using async/await) Allows for non-blocking operations and timeout handling Error Handling:\nTry/except blocks at multiple levels State transitions to ERROR on exceptions Stuck state detection and handling Conclusion The OpenManus project represents a well-designed, modular system for creating and running AI agents. It combines both top-down orchestration (from entry points through flows to agents) and cyclical processing (within agents and steps), creating a hybrid approach that allows for complex task planning and execution while maintaining responsiveness to user input and system events.\nKey strengths of the system include:\nA flexible and robust execution model using multiple nested loops with various termination conditions State-based control flow for tracking progress and managing execution Comprehensive error handling throughout the system Asynchronous execution for non-blocking operations A solid foundation for building complex agent-based applications with planning capabilities, tool use, and multi-agent coordination The project is actively developed and has a clear roadmap for future improvements, making it a promising open-source alternative to proprietary agent systems.\n",
+  "wordCount" : "3179",
+  "inLanguage": "en",
+  "datePublished": "2025-03-09T18:32:00-07:00",
+  "dateModified": "2025-03-09T18:32:00-07:00",
+  "author":{
+    "@type": "Person",
+    "name": "Alex Su"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alex-y-su.github.io/posts/open-manus-analysis/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Alex Su ⌗ personal",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://alex-y-su.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://alex-y-su.github.io/" accesskey="h" title="Alex Su ⌗ personal (Alt + H)">Alex Su ⌗ personal</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://alex-y-su.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      OpenManus Project Analysis: An Open-Source AI Agent System
+    </h1>
+    <div class="post-meta"><span title='2025-03-09 18:32:00 -0700 PDT'>March 9, 2025</span>&nbsp;·&nbsp;Alex Su
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="openmanus-project-analysis">OpenManus Project Analysis<a hidden class="anchor" aria-hidden="true" href="#openmanus-project-analysis">#</a></h1>
+<h2 id="project-overview">Project Overview<a hidden class="anchor" aria-hidden="true" href="#project-overview">#</a></h2>
+<p>OpenManus is an open-source alternative to the Manus agent system, designed to enable users to create and run AI agents without requiring an invite code. The project was launched by a team from MetaGPT and aims to provide a simple yet powerful implementation for AI agents.</p>
+<h2 id="core-architecture">Core Architecture<a hidden class="anchor" aria-hidden="true" href="#core-architecture">#</a></h2>
+<p>The project follows a well-structured architecture with several key components:</p>
+<h3 id="1-agent-system">1. Agent System<a hidden class="anchor" aria-hidden="true" href="#1-agent-system">#</a></h3>
+<p>The agent system is built on a hierarchical class structure:</p>
+<ul>
+<li>
+<p><strong>BaseAgent</strong>: The abstract foundation class that provides core functionality for state management, memory, and execution loops.</p>
+<ul>
+<li>Manages agent state transitions</li>
+<li>Handles memory of conversations</li>
+<li>Implements the main execution loop</li>
+<li>Detects and handles stuck states</li>
+</ul>
+</li>
+<li>
+<p><strong>ReActAgent</strong>: Extends BaseAgent with the Reasoning and Acting paradigm</p>
+<ul>
+<li>Implements the think-act cycle</li>
+<li>Provides abstract methods for thinking and acting</li>
+</ul>
+</li>
+<li>
+<p><strong>ToolCallAgent</strong>: Extends ReActAgent with tool/function calling capabilities</p>
+<ul>
+<li>Handles tool execution and responses</li>
+<li>Manages special tools like terminate</li>
+<li>Provides robust error handling for tool calls</li>
+</ul>
+</li>
+<li>
+<p><strong>Manus</strong>: The main agent implementation that inherits from ToolCallAgent</p>
+<ul>
+<li>Includes a comprehensive set of tools</li>
+<li>Serves as the primary interface for user interactions</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-flow-system">2. Flow System<a hidden class="anchor" aria-hidden="true" href="#2-flow-system">#</a></h3>
+<p>The flow system manages the execution of tasks:</p>
+<ul>
+<li>
+<p><strong>BaseFlow</strong>: Abstract base class for execution flows supporting multiple agents</p>
+<ul>
+<li>Manages a collection of agents</li>
+<li>Provides interfaces for flow execution</li>
+</ul>
+</li>
+<li>
+<p><strong>PlanningFlow</strong>: Implements a planning-based execution flow</p>
+<ul>
+<li>Breaks down tasks into steps</li>
+<li>Manages step execution and status tracking</li>
+<li>Provides plan creation, execution, and summarization</li>
+</ul>
+</li>
+<li>
+<p><strong>FlowFactory</strong>: Factory pattern for creating different types of flows</p>
+<ul>
+<li>Currently supports PlanningFlow</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-tools">3. Tools<a hidden class="anchor" aria-hidden="true" href="#3-tools">#</a></h3>
+<p>The agent has access to various tools that extend its capabilities:</p>
+<ul>
+<li><strong>PythonExecute</strong>: Executes Python code</li>
+<li><strong>GoogleSearch</strong>: Performs web searches</li>
+<li><strong>BrowserUseTool</strong>: Enables web browsing capabilities</li>
+<li><strong>FileSaver</strong>: Saves files to disk</li>
+<li><strong>Terminate</strong>: Ends the agent&rsquo;s execution</li>
+<li><strong>PlanningTool</strong>: Manages task planning and execution</li>
+<li><strong>CreateChatCompletion</strong>: Generates text using LLMs</li>
+</ul>
+<h2 id="main-logic-flow">Main Logic Flow<a hidden class="anchor" aria-hidden="true" href="#main-logic-flow">#</a></h2>
+<p>The main execution flow works as follows:</p>
+<ol>
+<li>
+<p><strong>Entry Points</strong>:</p>
+<ul>
+<li><code>main.py</code>: Simple entry point that creates a Manus agent and runs it in a loop</li>
+<li><code>run_flow.py</code>: More advanced entry point that uses the flow system for task execution</li>
+</ul>
+</li>
+<li>
+<p><strong>Execution Process</strong>:</p>
+<ul>
+<li>User inputs a prompt/task</li>
+<li>The system creates a plan using PlanningFlow (in run_flow.py) or directly executes via Manus agent (in main.py)</li>
+<li>For PlanningFlow, the task is broken down into steps that are executed sequentially</li>
+<li>Each step is executed by an appropriate agent (typically Manus)</li>
+<li>The agent uses its tools to complete the task</li>
+<li>Results are returned to the user</li>
+</ul>
+</li>
+<li>
+<p><strong>Agent Execution Cycle</strong>:</p>
+<ul>
+<li>The agent follows a ReAct (Reasoning and Acting) pattern:
+<ul>
+<li><strong>Think</strong>: Process the current state and decide what to do next</li>
+<li><strong>Act</strong>: Execute the decided actions using available tools</li>
+</ul>
+</li>
+<li>This cycle repeats until the task is completed or max steps are reached</li>
+</ul>
+</li>
+</ol>
+<h2 id="key-features">Key Features<a hidden class="anchor" aria-hidden="true" href="#key-features">#</a></h2>
+<ol>
+<li><strong>Tool-based Architecture</strong>: Modular design with various tools that can be added or modified</li>
+<li><strong>Planning Capabilities</strong>: Breaking down complex tasks into manageable steps</li>
+<li><strong>Multi-agent Support</strong>: The flow system supports multiple agents working together</li>
+<li><strong>Memory Management</strong>: Agents maintain memory of conversations and actions</li>
+<li><strong>State Management</strong>: Robust state tracking to handle execution flow</li>
+<li><strong>Error Handling</strong>: Comprehensive error handling throughout the system</li>
+</ol>
+<h2 id="key-prompts">Key Prompts<a hidden class="anchor" aria-hidden="true" href="#key-prompts">#</a></h2>
+<p>The OpenManus project uses several key prompts to guide the planning and thinking capabilities of the agents:</p>
+<h3 id="planning-prompts">Planning Prompts<a hidden class="anchor" aria-hidden="true" href="#planning-prompts">#</a></h3>
+<h4 id="planning-system-prompt">Planning System Prompt<a hidden class="anchor" aria-hidden="true" href="#planning-system-prompt">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>PLANNING_SYSTEM_PROMPT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">You are an expert Planning Agent tasked with solving problems efficiently through structured plans.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Your job is:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">1. Analyze requests to understand the task scope
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2. Create a clear, actionable plan that makes meaningful progress with the `planning` tool
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">3. Execute steps using available tools as needed
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">4. Track progress and adapt plans when necessary
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">5. Use `finish` to conclude immediately when the task is complete
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Available tools will vary by task but may include:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- `planning`: Create, update, and track plans (commands: create, update, mark_step, etc.)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">- `finish`: End the task when complete
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Break tasks into logical steps with clear outcomes. Avoid excessive detail or sub-steps.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Think about dependencies and verification methods.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Know when to conclude - don&#39;t continue thinking once objectives are met.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>This prompt instructs the planning agent on how to analyze requests, create structured plans, execute steps, track progress, and conclude tasks. It emphasizes creating clear, actionable plans with logical steps and avoiding excessive detail.</p>
+<h4 id="planning-next-step-prompt">Planning Next Step Prompt<a hidden class="anchor" aria-hidden="true" href="#planning-next-step-prompt">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>NEXT_STEP_PROMPT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Based on the current state, what&#39;s your next action?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Choose the most efficient path forward:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">1. Is the plan sufficient, or does it need refinement?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">2. Can you execute the next step immediately?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">3. Is the task complete? If so, use `finish` right away.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Be concise in your reasoning, then select the appropriate tool or action.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>This prompt guides the agent on determining the next action based on the current state of the plan, helping it decide whether to refine the plan, execute the next step, or conclude the task.</p>
+<h3 id="manus-agent-prompts">Manus Agent Prompts<a hidden class="anchor" aria-hidden="true" href="#manus-agent-prompts">#</a></h3>
+<h4 id="manus-system-prompt">Manus System Prompt<a hidden class="anchor" aria-hidden="true" href="#manus-system-prompt">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>SYSTEM_PROMPT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;You are OpenManus, an all-capable AI assistant, aimed at solving any task presented by the user. You have various tools at your disposal that you can call upon to efficiently complete complex requests. Whether it&#39;s programming, information retrieval, file processing, or web browsing, you can handle it all.&#34;</span>
+</span></span></code></pre></div><p>This prompt establishes the agent&rsquo;s identity and capabilities, setting the foundation for its thinking process.</p>
+<h4 id="manus-next-step-prompt">Manus Next Step Prompt<a hidden class="anchor" aria-hidden="true" href="#manus-next-step-prompt">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>NEXT_STEP_PROMPT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;You can interact with the computer using PythonExecute, save important content and information files through FileSaver, open browsers with BrowserUseTool, and retrieve information using GoogleSearch.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">PythonExecute: Execute Python code to interact with the computer system, data processing, automation tasks, etc.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">FileSaver: Save files locally, such as txt, py, html, etc.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">BrowserUseTool: Open, browse, and use web browsers.If you open a local HTML file, you must provide the absolute path to the file.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">GoogleSearch: Perform web information retrieval
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Based on user needs, proactively select the most appropriate tool or combination of tools. For complex tasks, you can break down the problem and use different tools step by step to solve it. After using each tool, clearly explain the execution results and suggest the next steps.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>This prompt instructs the agent on how to select and use tools based on user needs, break down complex problems, and explain results.</p>
+<h3 id="tool-call-prompts">Tool Call Prompts<a hidden class="anchor" aria-hidden="true" href="#tool-call-prompts">#</a></h3>
+<h4 id="tool-call-system-prompt">Tool Call System Prompt<a hidden class="anchor" aria-hidden="true" href="#tool-call-system-prompt">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>SYSTEM_PROMPT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;You are an agent that can execute tool calls&#34;</span>
+</span></span></code></pre></div><h4 id="tool-call-next-step-prompt">Tool Call Next Step Prompt<a hidden class="anchor" aria-hidden="true" href="#tool-call-next-step-prompt">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>NEXT_STEP_PROMPT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;If you want to stop interaction, use `terminate` tool/function call.&#34;</span>
+</span></span></code></pre></div><p>These prompts are simpler and focus on the agent&rsquo;s ability to execute tool calls and how to terminate interaction.</p>
+<h3 id="dynamic-execution-prompts">Dynamic Execution Prompts<a hidden class="anchor" aria-hidden="true" href="#dynamic-execution-prompts">#</a></h3>
+<p>In addition to static prompts, the system also generates dynamic prompts during execution. For example, in the PlanningFlow class, when executing a step:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>step_prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">CURRENT PLAN STATUS:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#e6db74">{</span>plan_status<span style="color:#e6db74">}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">YOUR CURRENT TASK:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">You are now working on step </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>current_step_index<span style="color:#e6db74">}</span><span style="color:#e6db74">: &#34;</span><span style="color:#e6db74">{</span>step_text<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Please execute this step using the appropriate tools. When you&#39;re done, provide a summary of what you accomplished.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>This dynamically generated prompt provides context about the current plan status and specific step to be executed.</p>
+<h2 id="technical-implementation">Technical Implementation<a hidden class="anchor" aria-hidden="true" href="#technical-implementation">#</a></h2>
+<p>The project is implemented in Python with asynchronous programming (using <code>asyncio</code>) for efficient execution. It uses Pydantic for data validation and LLMs (likely OpenAI&rsquo;s GPT models based on the configuration) for generating responses and plans.</p>
+<p>The codebase follows good software engineering practices with clear separation of concerns, abstraction, and inheritance to promote code reuse and maintainability.</p>
+<h2 id="configuration">Configuration<a hidden class="anchor" aria-hidden="true" href="#configuration">#</a></h2>
+<p>OpenManus requires configuration for the LLM APIs it uses. The configuration is stored in a <code>config.toml</code> file in the <code>config</code> directory, which includes settings for:</p>
+<ul>
+<li>LLM model selection</li>
+<li>API endpoints and keys</li>
+<li>Generation parameters</li>
+</ul>
+<h2 id="installation-and-usage">Installation and Usage<a hidden class="anchor" aria-hidden="true" href="#installation-and-usage">#</a></h2>
+<p>The project can be installed using either conda or uv (recommended). After installation, users can run the agent using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python main.py
+</span></span></code></pre></div><p>For the unstable version with planning capabilities:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python run_flow.py
+</span></span></code></pre></div><h2 id="project-roadmap">Project Roadmap<a hidden class="anchor" aria-hidden="true" href="#project-roadmap">#</a></h2>
+<p>According to the README, the project roadmap includes:</p>
+<ul>
+<li>Enhancing planning capabilities</li>
+<li>Introducing standardized evaluation metrics</li>
+<li>Expanding model adaptation</li>
+<li>Implementing containerized deployment</li>
+<li>Enriching example libraries</li>
+<li>Improving user experience through frontend/backend development</li>
+</ul>
+<h2 id="code-structure">Code Structure<a hidden class="anchor" aria-hidden="true" href="#code-structure">#</a></h2>
+<p>The main code structure is organized as follows:</p>
+<ul>
+<li><code>app/</code>: Main application code
+<ul>
+<li><code>agent/</code>: Agent implementations
+<ul>
+<li><code>base.py</code>: Base agent class</li>
+<li><code>react.py</code>: ReAct agent implementation</li>
+<li><code>toolcall.py</code>: Tool-calling agent implementation</li>
+<li><code>manus.py</code>: Main Manus agent</li>
+</ul>
+</li>
+<li><code>flow/</code>: Flow system implementations
+<ul>
+<li><code>base.py</code>: Base flow class</li>
+<li><code>planning.py</code>: Planning flow implementation</li>
+<li><code>flow_factory.py</code>: Factory for creating flows</li>
+</ul>
+</li>
+<li><code>tool/</code>: Tool implementations
+<ul>
+<li>Various tools for different capabilities</li>
+</ul>
+</li>
+<li><code>llm/</code>: LLM integration</li>
+<li><code>schema/</code>: Data schemas</li>
+<li><code>prompt/</code>: Prompt templates</li>
+</ul>
+</li>
+<li><code>config/</code>: Configuration files</li>
+<li><code>examples/</code>: Example use cases</li>
+<li><code>main.py</code>: Main entry point</li>
+<li><code>run_flow.py</code>: Alternative entry point with planning</li>
+</ul>
+<h2 id="default-tools">Default Tools<a hidden class="anchor" aria-hidden="true" href="#default-tools">#</a></h2>
+<p>OpenManus provides a set of default tools that agents can use to interact with the environment. Below are the function signatures and descriptions of these tools:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Execute bash commands in the terminal</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bash</span>(command: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Execute a bash command in the terminal.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        command: The bash command to execute. Can be empty to view additional logs 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                when previous exit code is -1. Can be &#39;ctrl+c&#39; to interrupt the 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                currently running process.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Command output or error message
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># End the interaction when the request is met or if the assistant cannot proceed</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">terminate</span>(status: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Terminate the interaction with success or failure status.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        status: The finish status of the interaction (&#34;success&#34; or &#34;failure&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Confirmation message
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># View, create, and edit files with string replacement functionality</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">str_replace_editor</span>(command: str, path: str, old_str: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>                            new_str: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, content: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>                            line_num: int <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Custom editing tool for viewing, creating and editing files.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        command: The operation to perform (&#34;view&#34;, &#34;create&#34;, &#34;str_replace&#34;, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &#34;insert&#34;, &#34;undo_edit&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        path: Path to the file or directory to operate on
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        old_str: (For str_replace) Exact string to replace
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        new_str: (For str_replace) New string to insert
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        content: (For create/insert) Content to write
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        line_num: (For insert) Line number to insert at
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        File content, operation result, or error message
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create structured completions with specified output formatting</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_chat_completion</span>(response: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Creates a structured completion with specified output formatting.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        response: The response text that should be delivered to the user
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Formatted response
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create and manage plans for solving complex tasks</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">planning</span>(command: str, plan_id: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, title: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>                  steps: list <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, step_index: int <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>                  status: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    A planning tool for creating and managing plans for complex tasks.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        command: The command to execute (&#34;create&#34;, &#34;update&#34;, &#34;list&#34;, &#34;get&#34;, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                &#34;set_active&#34;, &#34;mark_step&#34;, &#34;delete&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        plan_id: Unique identifier for the plan
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        title: Title for the plan
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        steps: List of plan steps
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        step_index: Index of the step to mark/update
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        status: Status to set for a step (&#34;completed&#34;, &#34;in_progress&#34;, &#34;pending&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Plan information or operation result
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Perform Google searches and return relevant links</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">google_search</span>(query: str, num_results: int <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>) <span style="color:#f92672">-&gt;</span> list:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Perform a Google search and return a list of relevant links.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        query: The search query to submit to Google
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        num_results: The number of search results to return (default: 10)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        List of URLs matching the search query
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Interact with a web browser to perform various actions</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">browser_use</span>(action: str, url: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, selector: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>                     index: int <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, text: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, 
+</span></span><span style="display:flex;"><span>                     js_code: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, tab_index: int <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>,
+</span></span><span style="display:flex;"><span>                     direction: str <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>, amount: int <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Interact with a web browser to perform various actions.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        action: The action to perform (&#34;navigate&#34;, &#34;click&#34;, &#34;input_text&#34;, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">               &#34;screenshot&#34;, &#34;get_html&#34;, &#34;get_text&#34;, &#34;read_links&#34;, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">               &#34;execute_js&#34;, &#34;scroll&#34;, &#34;switch_tab&#34;, &#34;new_tab&#34;, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">               &#34;close_tab&#34;, &#34;refresh&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        url: URL to navigate to
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        selector: CSS selector for elements
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        index: Element index for interaction
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        text: Text to input
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        js_code: JavaScript code to execute
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        tab_index: Tab index to switch to
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        direction: Scroll direction (&#34;up&#34;, &#34;down&#34;, &#34;left&#34;, &#34;right&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        amount: Amount to scroll
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Action result, page content, or error message
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Execute Python code</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">python_execute</span>(code: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Execute Python code and return the result.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        code: Python code to execute
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Execution result or error message
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Save content to files</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">file_saver</span>(path: str, content: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Save content to a file.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        path: Path where the file should be saved
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        content: Content to write to the file
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Success message or error
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>These tools provide agents with a wide range of capabilities, from executing commands and manipulating files to searching the web and interacting with browsers. The modular design of OpenManus makes it easy to extend with new tools or customize which tools are available to specific agent instances.</p>
+<h1 id="openmanus-execution-flow">OpenManus Execution Flow<a hidden class="anchor" aria-hidden="true" href="#openmanus-execution-flow">#</a></h1>
+<h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
+<p>The OpenManus project follows a hierarchical execution flow with multiple loops and decision points. The execution control combines both top-down orchestration and cyclical processing patterns. Below is a detailed breakdown of how execution flows through the system.</p>
+<h2 id="main-execution-paths">Main Execution Paths<a hidden class="anchor" aria-hidden="true" href="#main-execution-paths">#</a></h2>
+<p>There are two primary entry points to the system:</p>
+<ol>
+<li><strong>Simple Execution Path</strong> (via <code>main.py</code>)</li>
+<li><strong>Planning-based Execution Path</strong> (via <code>run_flow.py</code>)</li>
+</ol>
+<h2 id="detailed-execution-flow">Detailed Execution Flow<a hidden class="anchor" aria-hidden="true" href="#detailed-execution-flow">#</a></h2>
+<pre tabindex="0"><code>┌─────────────────────────┐
+│       User Input        │
+│    (Task/Request)       │
+└───────────┬─────────────┘
+            │
+            ▼
+┌─────────────────────────┐
+│     Entry Point         │
+│  (main.py/run_flow.py)  │
+└───────────┬─────────────┘
+            │
+            ├───────────────────┐
+            │                   │
+            ▼                   ▼
+┌─────────────────────┐  ┌─────────────────────┐
+│   Simple Path       │  │   Planning Path     │
+│    (main.py)        │  │   (run_flow.py)     │
+└─────────┬───────────┘  └──────────┬──────────┘
+          │                         │
+          ▼                         ▼
+┌─────────────────────┐  ┌─────────────────────┐
+│    Manus Agent      │  │   Flow Factory      │
+│    Initialization   │  │   (Creates Flow)    │
+└─────────┬───────────┘  └──────────┬──────────┘
+          │                         │
+          │                         ▼
+          │              ┌─────────────────────┐
+          │              │   Planning Flow     │
+          │              │   Initialization    │
+          │              └──────────┬──────────┘
+          │                         │
+          │                         ▼
+          │              ┌─────────────────────┐
+          │              │  Create Initial     │
+          │              │  Plan               │
+          │              └──────────┬──────────┘
+          │                         │
+          ▼                         ▼
+┌─────────────────────┐  ┌─────────────────────┐
+│                     │  │                     │
+│   Agent Run Loop    │◄─┤   Plan Step Loop    │
+│                     │  │                     │
+└─────────┬───────────┘  └──────────┬──────────┘
+          │                         │
+          ▼                         │
+┌───────────────────────────────────┴──────────┐
+│                                              │
+│              Agent Step Cycle                │
+│                                              │
+└───────────────────────┬──────────────────────┘
+                        │
+                        ▼
+          ┌─────────────────────────┐
+          │     Think Phase         │
+          │   (Decision Making)     │
+          └───────────┬─────────────┘
+                      │
+                      ▼
+          ┌─────────────────────────┐
+          │      Act Phase          │
+          │    (Tool Execution)     │
+          └───────────┬─────────────┘
+                      │
+                      ▼
+          ┌─────────────────────────┐
+          │   Tool Execution        │
+          │                         │
+          └───────────┬─────────────┘
+                      │
+                      │
+                      ▼
+          ┌─────────────────────────┐
+          │   Result Processing     │
+          │                         │
+          └───────────┬─────────────┘
+                      │
+                      │
+                      ▼
+          ┌─────────────────────────┐
+          │   Termination Check     │
+          │                         │
+          └───────────┬─────────────┘
+                      │
+                      │◄────────────┐
+                      │             │
+                      ▼             │
+              ┌───────────────┐     │
+              │  Finished?    │─No──┘
+              └───────┬───────┘
+                      │
+                      │ Yes
+                      ▼
+          ┌─────────────────────────┐
+          │   Return Results        │
+          │   to User               │
+          └─────────────────────────┘
+</code></pre><h2 id="execution-control-logic">Execution Control Logic<a hidden class="anchor" aria-hidden="true" href="#execution-control-logic">#</a></h2>
+<h3 id="1-simple-execution-path-mainpy">1. Simple Execution Path (main.py)<a hidden class="anchor" aria-hidden="true" href="#1-simple-execution-path-mainpy">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    agent <span style="color:#f92672">=</span> Manus()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:  <span style="color:#75715e"># Main input loop</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            prompt <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter your prompt (or &#39;exit&#39;/&#39;quit&#39; to quit): &#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># [Input validation logic]</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">await</span> agent<span style="color:#f92672">.</span>run(prompt)  <span style="color:#75715e"># Agent execution</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span></code></pre></div><p>The simple path follows these steps:</p>
+<ol>
+<li>Initialize the Manus agent</li>
+<li>Enter an infinite loop for user input</li>
+<li>For each input, call <code>agent.run()</code> to process the request</li>
+<li>Continue until user exits</li>
+</ol>
+<h3 id="2-planning-based-execution-path-run_flowpy">2. Planning-based Execution Path (run_flow.py)<a hidden class="anchor" aria-hidden="true" href="#2-planning-based-execution-path-run_flowpy">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_flow</span>():
+</span></span><span style="display:flex;"><span>    agents <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;manus&#34;</span>: Manus()}
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:  <span style="color:#75715e"># Main input loop</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            prompt <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter your prompt (or &#39;exit&#39; to quit): &#34;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># [Input validation logic]</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Create flow for planning</span>
+</span></span><span style="display:flex;"><span>            flow <span style="color:#f92672">=</span> FlowFactory<span style="color:#f92672">.</span>create_flow(
+</span></span><span style="display:flex;"><span>                flow_type<span style="color:#f92672">=</span>FlowType<span style="color:#f92672">.</span>PLANNING,
+</span></span><span style="display:flex;"><span>                agents<span style="color:#f92672">=</span>agents,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Execute flow with timeout</span>
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> asyncio<span style="color:#f92672">.</span>wait_for(
+</span></span><span style="display:flex;"><span>                flow<span style="color:#f92672">.</span>execute(prompt),
+</span></span><span style="display:flex;"><span>                timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">3600</span>,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">KeyboardInterrupt</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span></code></pre></div><p>The planning path follows these steps:</p>
+<ol>
+<li>Initialize agents dictionary with Manus agent</li>
+<li>Enter an infinite loop for user input</li>
+<li>For each input, create a PlanningFlow using FlowFactory</li>
+<li>Execute the flow with the prompt</li>
+<li>Continue until user exits</li>
+</ol>
+<h3 id="3-flow-execution-planningflowexecute">3. Flow Execution (PlanningFlow.execute)<a hidden class="anchor" aria-hidden="true" href="#3-flow-execution-planningflowexecute">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute</span>(self, input_text: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create initial plan</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>_create_initial_plan(input_text)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:  <span style="color:#75715e"># Plan step execution loop</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get current step</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>current_step_index, step_info <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>_get_current_step_info()
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Exit if no more steps</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>current_step_index <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">+=</span> <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>_finalize_plan()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Execute current step with appropriate agent</span>
+</span></span><span style="display:flex;"><span>        step_type <span style="color:#f92672">=</span> step_info<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;type&#34;</span>)
+</span></span><span style="display:flex;"><span>        executor <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>get_executor(step_type)
+</span></span><span style="display:flex;"><span>        step_result <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>_execute_step(executor, step_info)
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">+=</span> step_result <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Check if agent wants to terminate</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> hasattr(executor, <span style="color:#e6db74">&#34;state&#34;</span>) <span style="color:#f92672">and</span> executor<span style="color:#f92672">.</span>state <span style="color:#f92672">==</span> AgentState<span style="color:#f92672">.</span>FINISHED:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span></code></pre></div><p>The flow execution follows these steps:</p>
+<ol>
+<li>Create an initial plan based on the input</li>
+<li>Enter a loop to process each plan step</li>
+<li>For each step, get the appropriate executor agent</li>
+<li>Execute the step and collect results</li>
+<li>Continue until all steps are completed or termination is requested</li>
+</ol>
+<h3 id="4-agent-execution-baseagentrun">4. Agent Execution (BaseAgent.run)<a hidden class="anchor" aria-hidden="true" href="#4-agent-execution-baseagentrun">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>(self, request: Optional[str] <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> request:
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>update_memory(<span style="color:#e6db74">&#34;user&#34;</span>, request)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    results: List[str] <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>state_context(AgentState<span style="color:#f92672">.</span>RUNNING):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>current_step <span style="color:#f92672">&lt;</span> self<span style="color:#f92672">.</span>max_steps <span style="color:#f92672">and</span> 
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>state <span style="color:#f92672">!=</span> AgentState<span style="color:#f92672">.</span>FINISHED
+</span></span><span style="display:flex;"><span>        ):  <span style="color:#75715e"># Agent step execution loop</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>current_step <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            step_result <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>step()
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Check for stuck state</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>is_stuck():
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>handle_stuck_state()
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            results<span style="color:#f92672">.</span>append(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Step </span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>current_step<span style="color:#e6db74">}</span><span style="color:#e6db74">: </span><span style="color:#e6db74">{</span>step_result<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>current_step <span style="color:#f92672">&gt;=</span> self<span style="color:#f92672">.</span>max_steps:
+</span></span><span style="display:flex;"><span>            results<span style="color:#f92672">.</span>append(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Terminated: Reached max steps (</span><span style="color:#e6db74">{</span>self<span style="color:#f92672">.</span>max_steps<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>join(results)
+</span></span></code></pre></div><p>The agent execution follows these steps:</p>
+<ol>
+<li>Update memory with the user request</li>
+<li>Enter a loop to execute steps until max_steps is reached or state is FINISHED</li>
+<li>For each iteration, call the <code>step()</code> method</li>
+<li>Check for and handle stuck states</li>
+<li>Collect results from each step</li>
+<li>Return the combined results</li>
+</ol>
+<h3 id="5-agent-step-cycle-reactagentstep">5. Agent Step Cycle (ReActAgent.step)<a hidden class="anchor" aria-hidden="true" href="#5-agent-step-cycle-reactagentstep">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">step</span>(self) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Execute a single step: think and act.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    should_act <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>think()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> should_act:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Thinking complete - no action needed&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>act()
+</span></span></code></pre></div><p>The agent step cycle follows these steps:</p>
+<ol>
+<li>Call <code>think()</code> to process current state and decide next action</li>
+<li>If thinking indicates action is needed, call <code>act()</code> to execute the action</li>
+<li>Return the result</li>
+</ol>
+<h3 id="6-tool-execution-toolcallagentact">6. Tool Execution (ToolCallAgent.act)<a hidden class="anchor" aria-hidden="true" href="#6-tool-execution-toolcallagentact">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">act</span>(self) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Execute tool calls and handle their results&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>tool_calls:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>tool_choices <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;required&#34;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(TOOL_CALL_REQUIRED)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>messages[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>content <span style="color:#f92672">or</span> <span style="color:#e6db74">&#34;No content or commands to execute&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    results <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> command <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>tool_calls:
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> self<span style="color:#f92672">.</span>execute_tool(command)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Add tool response to memory</span>
+</span></span><span style="display:flex;"><span>        tool_msg <span style="color:#f92672">=</span> Message<span style="color:#f92672">.</span>tool_message(
+</span></span><span style="display:flex;"><span>            content<span style="color:#f92672">=</span>result, tool_call_id<span style="color:#f92672">=</span>command<span style="color:#f92672">.</span>id, name<span style="color:#f92672">=</span>command<span style="color:#f92672">.</span>function<span style="color:#f92672">.</span>name
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>memory<span style="color:#f92672">.</span>add_message(tool_msg)
+</span></span><span style="display:flex;"><span>        results<span style="color:#f92672">.</span>append(result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>join(results)
+</span></span></code></pre></div><p>The tool execution follows these steps:</p>
+<ol>
+<li>Check if there are tool calls to execute</li>
+<li>For each tool call, execute the tool and collect the result</li>
+<li>Add the tool response to memory</li>
+<li>Return the combined results</li>
+</ol>
+<h2 id="key-control-flow-characteristics">Key Control Flow Characteristics<a hidden class="anchor" aria-hidden="true" href="#key-control-flow-characteristics">#</a></h2>
+<ol>
+<li>
+<p><strong>Multiple Nested Loops</strong>:</p>
+<ul>
+<li>Outer loop for user input processing</li>
+<li>Middle loop for plan step execution (in planning flow)</li>
+<li>Inner loop for agent step execution</li>
+<li>Each with their own termination conditions</li>
+</ul>
+</li>
+<li>
+<p><strong>State-Based Control Flow</strong>:</p>
+<ul>
+<li>Agent states (IDLE, RUNNING, FINISHED, ERROR) control execution</li>
+<li>Plan step statuses (not_started, in_progress, completed, blocked) track progress</li>
+</ul>
+</li>
+<li>
+<p><strong>Event-Driven Termination</strong>:</p>
+<ul>
+<li>Execution can be terminated by:
+<ul>
+<li>User exit command</li>
+<li>Agent state changing to FINISHED</li>
+<li>Maximum steps reached</li>
+<li>Tool execution (e.g., Terminate tool)</li>
+<li>Timeout (in run_flow.py)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Asynchronous Execution</strong>:</p>
+<ul>
+<li>All main execution functions are asynchronous (using <code>async/await</code>)</li>
+<li>Allows for non-blocking operations and timeout handling</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Handling</strong>:</p>
+<ul>
+<li>Try/except blocks at multiple levels</li>
+<li>State transitions to ERROR on exceptions</li>
+<li>Stuck state detection and handling</li>
+</ul>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>The OpenManus project represents a well-designed, modular system for creating and running AI agents. It combines both top-down orchestration (from entry points through flows to agents) and cyclical processing (within agents and steps), creating a hybrid approach that allows for complex task planning and execution while maintaining responsiveness to user input and system events.</p>
+<p>Key strengths of the system include:</p>
+<ol>
+<li>A flexible and robust execution model using multiple nested loops with various termination conditions</li>
+<li>State-based control flow for tracking progress and managing execution</li>
+<li>Comprehensive error handling throughout the system</li>
+<li>Asynchronous execution for non-blocking operations</li>
+<li>A solid foundation for building complex agent-based applications with planning capabilities, tool use, and multi-agent coordination</li>
+</ol>
+<p>The project is actively developed and has a clear roadmap for future improvements, making it a promising open-source alternative to proprietary agent systems.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://alex-y-su.github.io/">Alex Su ⌗ personal</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.123.0"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.145.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -11,7 +11,7 @@
 <meta name="description" content="My own thoughts about software development, motivation, work.">
 <meta name="author" content="Alex Su">
 <link rel="canonical" href="https://alex-y-su.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://alex-y-su.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://alex-y-su.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://alex-y-su.github.io/favicon-32x32.png">
@@ -57,26 +57,15 @@
         }
 
     </style>
-</noscript>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-79258419-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><meta property="og:title" content="Alex Su ⌗ personal" />
-<meta property="og:description" content="My own thoughts about software development, motivation, work." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://alex-y-su.github.io/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Alex Su ⌗ personal"/>
-<meta name="twitter:description" content="My own thoughts about software development, motivation, work."/>
+</noscript><meta property="og:url" content="https://alex-y-su.github.io/">
+  <meta property="og:site_name" content="Alex Su ⌗ personal">
+  <meta property="og:title" content="Alex Su ⌗ personal">
+  <meta property="og:description" content="My own thoughts about software development, motivation, work.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alex Su ⌗ personal">
+<meta name="twitter:description" content="My own thoughts about software development, motivation, work.">
 
 <script type="application/ld+json">
 {
@@ -85,9 +74,9 @@ if (!doNotTrack) {
   "name": "Alex Su ⌗ personal",
   "url": "https://alex-y-su.github.io/",
   "description": "My own thoughts about software development, motivation, work.",
-  "thumbnailUrl": "https://alex-y-su.github.io/favicon.ico",
+  "logo": "https://alex-y-su.github.io/favicon.ico",
   "sameAs": [
-      
+      "https://x.com/alex_y_su"
   ]
 }
 </script>
@@ -110,7 +99,7 @@ if (!doNotTrack) {
         <div class="logo">
             <a href="https://alex-y-su.github.io/" accesskey="h" title="Alex Su ⌗ personal (Alt + H)">Alex Su ⌗ personal</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -130,8 +119,6 @@ if (!doNotTrack) {
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -147,11 +134,25 @@ if (!doNotTrack) {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">How to install chromium on Mac M1 using homebrew
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>It not as easy as it seems on first look, but:
+brew install --cask chromium sudo xattr -r -d com.apple.quarantine /Applications/Chromium.app </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-05 18:30:19 +0100 +0100'>June 5, 2022</span>&nbsp;·&nbsp;Alex Su</footer>
+  <a class="entry-link" aria-label="post link to How to install chromium on Mac M1 using homebrew" href="https://alex-y-su.github.io/posts/install-chromium-on-mac-m1-usgin-brew/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">What to Avoid When You Do Job Test
     </h2>
   </header>
   <div class="entry-content">
-    <p>I’ve been interviewing software developers for 11 years, and for the last four years, I’ve averaged 1-2 interviews each week. We normally don’t send a test to persons whose experience we can readily validate in an interview or through a background check, but it is OK to send a test to applicants with no or little experience. From start to finish, the test usually takes less than 4 hours to construct....</p>
+    <p>I’ve been interviewing software developers for 11 years, and for the last four years, I’ve averaged 1-2 interviews each week. We normally don’t send a test to persons whose experience we can readily validate in an interview or through a background check, but it is OK to send a test to applicants with no or little experience. From start to finish, the test usually takes less than 4 hours to construct. Normally, I evaluate test results personally, and here is a list of things I dislike:
+...</p>
   </div>
   <footer class="entry-footer"><span title='2019-05-11 18:30:19 +0100 +0100'>May 11, 2019</span>&nbsp;·&nbsp;Alex Su</footer>
   <a class="entry-link" aria-label="post link to What to Avoid When You Do Job Test" href="https://alex-y-su.github.io/posts/what-to-avoid-when-you-do-job-test/"></a>
@@ -165,7 +166,8 @@ if (!doNotTrack) {
   <div class="entry-content">
     <p>The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
 For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).
-HUGO (https://gohugo.io) generates this side statically....</p>
+HUGO (https://gohugo.io) generates this side statically. I investigated two systems: JEKILL and HUGO, however JEKILL utilizes Ruby and HUGO uses Golang. Because I lack considerable expertise in both, my preferred guideline is to take what you or your team is most experienced with, which didn’t work here. Because Go seemed promising, I chose to devote my efforts to HUGO.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2019-05-10 22:18:20 +0100 +0100'>May 10, 2019</span>&nbsp;·&nbsp;Alex Su</footer>
   <a class="entry-link" aria-label="post link to How This Site Made and Site Generators" href="https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/"></a>
@@ -180,7 +182,8 @@ HUGO (https://gohugo.io) generates this side statically....</p>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://alex-y-su.github.io/">Alex Su ⌗ personal</a></span>
+        <span>&copy; 2025 <a href="https://alex-y-su.github.io/">Alex Su ⌗ personal</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

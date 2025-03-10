@@ -4,111 +4,176 @@
     <title>Alex Su ⌗ personal</title>
     <link>https://alex-y-su.github.io/</link>
     <description>Recent content on Alex Su ⌗ personal</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2024 04:42:20 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Mar 2025 18:32:00 -0700</lastBuildDate>
     <atom:link href="https://alex-y-su.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenManus Project Analysis: An Open-Source AI Agent System</title>
+      <link>https://alex-y-su.github.io/posts/open-manus-analysis/</link>
+      <pubDate>Sun, 09 Mar 2025 18:32:00 -0700</pubDate>
+      <guid>https://alex-y-su.github.io/posts/open-manus-analysis/</guid>
+      <description>&lt;h1 id=&#34;openmanus-project-analysis&#34;&gt;OpenManus Project Analysis&lt;/h1&gt;
+&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;
+&lt;p&gt;OpenManus is an open-source alternative to the Manus agent system, designed to enable users to create and run AI agents without requiring an invite code. The project was launched by a team from MetaGPT and aims to provide a simple yet powerful implementation for AI agents.&lt;/p&gt;
+&lt;h2 id=&#34;core-architecture&#34;&gt;Core Architecture&lt;/h2&gt;
+&lt;p&gt;The project follows a well-structured architecture with several key components:&lt;/p&gt;
+&lt;h3 id=&#34;1-agent-system&#34;&gt;1. Agent System&lt;/h3&gt;
+&lt;p&gt;The agent system is built on a hierarchical class structure:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Unleashing the Full Potential of AI: Crafting Code for Language Models</title>
       <link>https://alex-y-su.github.io/posts/how-to-code-for-llm/</link>
       <pubDate>Mon, 11 Mar 2024 04:42:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/how-to-code-for-llm/</guid>
-      <description>Unleashing the Full Potential of AI: Crafting Code for Language Models In the ever-evolving technological realm, integrating language models into software development has emerged as a game-changer. However, maximizing the benefits of this AI-driven approach requires a strategic mindset and meticulous coding practices. By embracing modularity, emphasizing automated testing, limiting dependencies, and harnessing clear naming conventions, we can pave the way for a seamless collaboration between human developers and language models.</description>
+      <description>&lt;h1 id=&#34;unleashing-the-full-potential-of-ai-crafting-code-for-language-models&#34;&gt;Unleashing the Full Potential of AI: Crafting Code for Language Models&lt;/h1&gt;
+&lt;p&gt;In the ever-evolving technological realm, integrating language models into software development has emerged as a game-changer. However, maximizing the benefits of this AI-driven approach requires a strategic mindset and meticulous coding practices. By embracing modularity, emphasizing automated testing, limiting dependencies, and harnessing clear naming conventions, we can pave the way for a seamless collaboration between human developers and language models.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Dawn of Intuitive Technology: Reflecting on Jensen Huang&#39;s Vision</title>
       <link>https://alex-y-su.github.io/posts/the-dawn-of-intuitive-technology-jensen-huang-vision/</link>
       <pubDate>Fri, 01 Mar 2024 04:42:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/the-dawn-of-intuitive-technology-jensen-huang-vision/</guid>
-      <description>The Dawn of Intuitive Technology: Reflecting on Jensen Huang&amp;rsquo;s Vision Summary:
-Nvidia CEO Jensen Huang envisions a future where AI and intuitive technology will transform programming so that &amp;ldquo;nobody has to program&amp;rdquo; and &amp;ldquo;everybody in the world is now a programmer.&amp;rdquo;
-In the next 10-20 years, we may see a transition from current technological interfaces to AI-powered interfaces that understand users and produce solutions intuitively.
-This will require a shift in the IT landscape towards thousands of specialized AI models rather than thousands of frameworks.</description>
+      <description>&lt;h1 id=&#34;the-dawn-of-intuitive-technology-reflecting-on-jensen-huangs-vision&#34;&gt;The Dawn of Intuitive Technology: Reflecting on Jensen Huang&amp;rsquo;s Vision&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Nvidia CEO Jensen Huang envisions a future where AI and intuitive technology will transform programming so that &amp;ldquo;nobody has to program&amp;rdquo; and &amp;ldquo;everybody in the world is now a programmer.&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the next 10-20 years, we may see a transition from current technological interfaces to AI-powered interfaces that understand users and produce solutions intuitively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This will require a shift in the IT landscape towards thousands of specialized AI models rather than thousands of frameworks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why Offer Prompts at AIWIZE? Delving Into Our Commitment to Seamless AI Integration</title>
       <link>https://alex-y-su.github.io/posts/why-ai-prompts-in-aiwize/</link>
       <pubDate>Thu, 29 Feb 2024 04:42:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/why-ai-prompts-in-aiwize/</guid>
-      <description>Why Offer Prompts at AIWIZE? Delving Into Our Commitment to Seamless AI Integration In the swiftly evolving landscape of artificial intelligence, the quest for tools that are not only powerful but also accessible to a wide range of users is paramount. At AIWIZE, our mission is to democratize AI technology, making it a seamless and intuitive part of everyone&amp;rsquo;s daily work and creative processes. Central to this mission is our commitment to providing a rich collection of prompts within our easy-to-use dashboard, designed for a diverse array of AI tasks.</description>
+      <description>&lt;h1 id=&#34;why-offer-prompts-at-aiwize-delving-into-our-commitment-to-seamless-ai-integration&#34;&gt;Why Offer Prompts at AIWIZE? Delving Into Our Commitment to Seamless AI Integration&lt;/h1&gt;
+&lt;p&gt;In the swiftly evolving landscape of artificial intelligence, the quest for tools that are not only powerful but also accessible to a wide range of users is paramount. At AIWIZE, our mission is to democratize AI technology, making it a seamless and intuitive part of everyone&amp;rsquo;s daily work and creative processes. Central to this mission is our commitment to providing a rich collection of prompts within our easy-to-use dashboard, designed for a diverse array of AI tasks. This feature isn&amp;rsquo;t just an addition; it&amp;rsquo;s a reflection of our understanding of the current AI ecosystem and our vision for its future.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Beyond ChatGPT: OpenAI&#39;s Rumored Foray into Advanced Browser Agents</title>
       <link>https://alex-y-su.github.io/posts/openai-agents-2-0-browser-automation/</link>
       <pubDate>Sun, 25 Feb 2024 02:46:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/openai-agents-2-0-browser-automation/</guid>
-      <description>Beyond ChatGPT: OpenAI&amp;rsquo;s Rumored Foray into Advanced Browser Agents Introduction to Agents 2.0 Recent rumors have sparked curiosity about OpenAI potentially developing new technology called Agent 2.0. This tool is supposed to allow language models greater control over web browsers to automate tasks across the internet without utilizing the API of internet services. The core premise around Agent 2.0 is enabling LLMs to interact with and control browsers more flexibly to automate activities spanning various websites and web apps.</description>
+      <description>&lt;h1 id=&#34;beyond-chatgpt-openais-rumored-foray-into-advanced-browser-agents&#34;&gt;Beyond ChatGPT: OpenAI&amp;rsquo;s Rumored Foray into Advanced Browser Agents&lt;/h1&gt;
+&lt;h2 id=&#34;introduction-to-agents-20&#34;&gt;Introduction to Agents 2.0&lt;/h2&gt;
+&lt;p&gt;Recent rumors have sparked curiosity about OpenAI potentially developing new technology called Agent 2.0. This tool is supposed to allow language models greater control over web browsers to automate tasks across the internet without utilizing the API of internet services. The core premise around Agent 2.0 is enabling LLMs to interact with and control browsers more flexibly to automate activities spanning various websites and web apps. This aligns well with OpenAI&amp;rsquo;s vision to make AI systems more generally useful in real-world contexts. This post contains my thoughts on the likelihood and implications of this rumored new capability.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Prompt Engineering: A Competitive Edge</title>
       <link>https://alex-y-su.github.io/posts/prompt-engineering-a-competitive-edge/</link>
       <pubDate>Mon, 19 Feb 2024 13:46:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/prompt-engineering-a-competitive-edge/</guid>
-      <description>Prompt Engineering: A Competitive Edge As an employer and a leader who utilizes AI regularly, I have seen firsthand why prompt engineering is becoming a must-have skill.
-Hiring for Initiative Candidates skilled at prompting immediately stand out in job interviews nowadays. With AI assistants handling lots of routine tasks, I&amp;rsquo;m looking for self-starters who can maximize productivity from day one. Prompt literacy demonstrates that - rather than needing detailed instructions, these employees take charge to translate goals into crisp prompts that extract the most value from AI.</description>
+      <description>&lt;h1 id=&#34;prompt-engineering-a-competitive-edge&#34;&gt;Prompt Engineering: A Competitive Edge&lt;/h1&gt;
+&lt;p&gt;As an employer and a leader who utilizes AI regularly, I have seen firsthand why prompt engineering is becoming a must-have skill.&lt;/p&gt;
+&lt;h2 id=&#34;hiring-for-initiative&#34;&gt;Hiring for Initiative&lt;/h2&gt;
+&lt;p&gt;Candidates skilled at prompting immediately stand out in job interviews nowadays. With AI assistants handling lots of routine tasks, I&amp;rsquo;m looking for self-starters who can maximize productivity from day one. Prompt literacy demonstrates that - rather than needing detailed instructions, these employees take charge to translate goals into crisp prompts that extract the most value from AI. It&amp;rsquo;s a quality that accelerates their learning curve tremendously.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Embracing the Future: Why AI Is More Than Just a Hype</title>
       <link>https://alex-y-su.github.io/posts/ai-for-business-is-here-to-stay/</link>
       <pubDate>Sun, 11 Feb 2024 17:46:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/ai-for-business-is-here-to-stay/</guid>
-      <description>Embracing the Future: Why AI Is More Than Just a Hype Short version Quick and Smart Information Access:
-AI, especially Large Language Models (LLMs), delivers fast and accurate search results. Understands user queries better than traditional search engines. Overcoming the Blank Page Syndrome:
-AI suggests simple steps to start big tasks, making it easier to begin work. Acts as a helpful nudge against procrastination. Economical for Work:
-AI is cost-effective, offering significant time savings for a fraction of the cost.</description>
+      <description>&lt;h1 id=&#34;embracing-the-future-why-ai-is-more-than-just-a-hype&#34;&gt;Embracing the Future: Why AI Is More Than Just a Hype&lt;/h1&gt;
+&lt;h2 id=&#34;short-version&#34;&gt;&lt;strong&gt;Short version&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Quick and Smart Information Access&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI, especially Large Language Models (LLMs), delivers fast and accurate search results.&lt;/li&gt;
+&lt;li&gt;Understands user queries better than traditional search engines.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Overcoming the Blank Page Syndrome&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI suggests simple steps to start big tasks, making it easier to begin work.&lt;/li&gt;
+&lt;li&gt;Acts as a helpful nudge against procrastination.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Economical for Work&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI is cost-effective, offering significant time savings for a fraction of the cost.&lt;/li&gt;
+&lt;li&gt;Organizations gain a competitive advantage by using AI, though security considerations are important.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Open and Accessible Technology&lt;/strong&gt;:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Consistency in AI: Challenges and Solutions</title>
       <link>https://alex-y-su.github.io/posts/ai-consistency-challenges-and-solutions/</link>
       <pubDate>Sat, 21 Oct 2023 17:46:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/ai-consistency-challenges-and-solutions/</guid>
-      <description>One of the primary challenges confronting current AI models, especially the transformer-based ones, is the ability to ensure consistent results. While it&amp;rsquo;s a recognized fact that these models might produce different outputs for identical datasets, it&amp;rsquo;s crucial to differentiate between consistency and determinism. Determinism, in a computational context, means that given the same initial conditions, the algorithm will produce the same results every time. However, inherent randomness during training can introduce variability.</description>
+      <description>&lt;p&gt;One of the primary challenges confronting current AI models, especially the transformer-based ones, is the ability to ensure consistent results. While it&amp;rsquo;s a recognized fact that these models might produce different outputs for identical datasets, it&amp;rsquo;s crucial to differentiate between consistency and determinism. Determinism, in a computational context, means that given the same initial conditions, the algorithm will produce the same results every time. However, inherent randomness during training can introduce variability.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Convergence of Business Processing Systems and Marketing: The Future of AI-Driven Marketing Automation</title>
       <link>https://alex-y-su.github.io/posts/bpm-as-present-of-marketing-automation/</link>
       <pubDate>Fri, 31 Mar 2023 11:46:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/bpm-as-present-of-marketing-automation/</guid>
-      <description>As times goes by the lines between different business processes have started to blur. One such area where this is increasingly evident is the intersection of business processing systems and marketing.
-The Overlap Between Business Processing Systems and Marketing It&amp;rsquo;s quite intuitive to view marketing processes as an extension of general business processes. While there are occasional exceptions, such as viral marketing phenomena, the majority of marketing work hours are spent following a fairly deterministic execution flow.</description>
+      <description>&lt;p&gt;As times goes by the lines between different business processes have started to blur. One such area where this is
+increasingly evident is the intersection of business processing systems and marketing.&lt;/p&gt;
+&lt;h2 id=&#34;the-overlap-between-business-processing-systems-and-marketing&#34;&gt;The Overlap Between Business Processing Systems and Marketing&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s quite intuitive to view marketing processes as an extension of general business processes. While there are
+occasional exceptions, such as viral marketing phenomena, the majority of marketing work hours are spent following a
+fairly deterministic execution flow. This includes activities like generating texts, visuals, or images, which are then
+transformed and disseminated through standard marketing channels like social networks, news websites, and landing pages.
+These processes can be accurately represented within the framework of business process management systems, where each
+block represents a standard marketing action with defined inputs and outputs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About author</title>
       <link>https://alex-y-su.github.io/about/</link>
       <pubDate>Thu, 23 Feb 2023 17:46:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/about/</guid>
-      <description>Know how things works.</description>
+      <description>&lt;p&gt;Know how things works.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Alex Su&#34; loading=&#34;lazy&#34; src=&#34;//alex-y-su.github.io/img/avatar.jpg&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>ChatGPT, LLMs and Black Boxes</title>
       <link>https://alex-y-su.github.io/posts/chatgpt-gpt3-llm/</link>
       <pubDate>Thu, 23 Feb 2023 17:46:20 +0800</pubDate>
       <guid>https://alex-y-su.github.io/posts/chatgpt-gpt3-llm/</guid>
-      <description>Large language models (LLMs) like GPT-3 can be incredibly helpful tools for generating text quickly and accurately. However, it&amp;rsquo;s important to remember that LLMs are not sentient beings and they don&amp;rsquo;t truly understand the meaning behind the language they generate. Instead, they use mathematical models to predict the most likely response based on their training data. To use LLMs effectively, it&amp;rsquo;s important to be mindful of the data that&amp;rsquo;s being used to train them.</description>
+      <description>&lt;p&gt;Large language models (LLMs) like GPT-3 can be incredibly helpful tools for generating text quickly and accurately.
+However, it&amp;rsquo;s important to remember that LLMs are not sentient beings and they don&amp;rsquo;t truly understand the meaning behind
+the language they generate. Instead, they use mathematical models to &lt;strong&gt;predict&lt;/strong&gt; the &lt;strong&gt;most likely&lt;/strong&gt; response based on
+their training data. To use LLMs effectively, it&amp;rsquo;s important to be mindful of the data that&amp;rsquo;s being used to train them.
+Biases in the data can impact the output of an LLM. Additionally, it&amp;rsquo;s important to think of LLMs as tools that can help
+accomplish specific goals, rather than as black boxes that we can&amp;rsquo;t control.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to install chromium on Mac M1 using homebrew</title>
       <link>https://alex-y-su.github.io/posts/install-chromium-on-mac-m1-usgin-brew/</link>
       <pubDate>Sun, 05 Jun 2022 18:30:19 +0100</pubDate>
       <guid>https://alex-y-su.github.io/posts/install-chromium-on-mac-m1-usgin-brew/</guid>
-      <description>It not as easy as it seems on first look, but:
-brew install --cask chromium sudo xattr -r -d com.apple.quarantine /Applications/Chromium.app </description>
+      <description>&lt;p&gt;It not as easy as it seems on first look, but:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install --cask chromium
+sudo xattr -r -d com.apple.quarantine /Applications/Chromium.app
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>What to Avoid When You Do Job Test</title>
       <link>https://alex-y-su.github.io/posts/what-to-avoid-when-you-do-job-test/</link>
       <pubDate>Sat, 11 May 2019 18:30:19 +0100</pubDate>
       <guid>https://alex-y-su.github.io/posts/what-to-avoid-when-you-do-job-test/</guid>
-      <description>I&amp;rsquo;ve been interviewing software developers for 11 years, and for the last four years, I&amp;rsquo;ve averaged 1-2 interviews each week. We normally don&amp;rsquo;t send a test to persons whose experience we can readily validate in an interview or through a background check, but it is OK to send a test to applicants with no or little experience. From start to finish, the test usually takes less than 4 hours to construct.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve been interviewing software developers for 11 years, and for the last four years, I&amp;rsquo;ve averaged 1-2 interviews each
+week. We normally don&amp;rsquo;t send a test to persons whose experience we can readily validate in an interview or through a
+background check, but it is OK to send a test to applicants with no or little experience. From start to finish, the test
+usually takes less than 4 hours to construct. Normally, I evaluate test results personally, and here is a list of things
+I dislike:&lt;/p&gt;</description>
     </item>
     <item>
       <title>How This Site Made and Site Generators</title>
       <link>https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/</link>
       <pubDate>Fri, 10 May 2019 22:18:20 +0100</pubDate>
       <guid>https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/</guid>
-      <description>The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
-For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).
-HUGO (https://gohugo.io) generates this side statically.</description>
+      <description>&lt;p&gt;The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far
+from flawless.&lt;/p&gt;
+&lt;p&gt;For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable
+not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting
+provider).&lt;/p&gt;
+&lt;p&gt;HUGO (&lt;a href=&#34;https://gohugo.io&#34;&gt;https://gohugo.io&lt;/a&gt;) generates this side statically. I investigated two systems: JEKILL and HUGO, however JEKILL
+utilizes Ruby and HUGO uses Golang. Because I lack considerable expertise in both, my preferred guideline is to take
+what you or your team is most experienced with, which didn&amp;rsquo;t work here. Because Go seemed promising, I chose to devote
+my efforts to HUGO.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

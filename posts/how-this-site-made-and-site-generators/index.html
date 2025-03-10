@@ -7,12 +7,18 @@
 <meta name="robots" content="index, follow">
 <title>How This Site Made and Site Generators | Alex Su ⌗ personal</title>
 <meta name="keywords" content="">
-<meta name="description" content="The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
-For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).
-HUGO (https://gohugo.io) generates this side statically.">
+<meta name="description" content="The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far
+from flawless.
+For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable
+not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting
+provider).
+HUGO (https://gohugo.io) generates this side statically. I investigated two systems: JEKILL and HUGO, however JEKILL
+utilizes Ruby and HUGO uses Golang. Because I lack considerable expertise in both, my preferred guideline is to take
+what you or your team is most experienced with, which didn&rsquo;t work here. Because Go seemed promising, I chose to devote
+my efforts to HUGO.">
 <meta name="author" content="Alex Su">
 <link rel="canonical" href="https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://alex-y-su.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://alex-y-su.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://alex-y-su.github.io/favicon-32x32.png">
@@ -57,32 +63,28 @@ HUGO (https://gohugo.io) generates this side statically.">
         }
 
     </style>
-</noscript>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-79258419-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><meta property="og:title" content="How This Site Made and Site Generators" />
-<meta property="og:description" content="The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
+</noscript><meta property="og:url" content="https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/">
+  <meta property="og:site_name" content="Alex Su ⌗ personal">
+  <meta property="og:title" content="How This Site Made and Site Generators">
+  <meta property="og:description" content="The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
 For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).
-HUGO (https://gohugo.io) generates this side statically." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://alex-y-su.github.io/posts/how-this-site-made-and-site-generators/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-05-10T22:18:20+01:00" />
-<meta property="article:modified_time" content="2019-05-10T22:18:20+01:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How This Site Made and Site Generators"/>
-<meta name="twitter:description" content="The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.
-For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).
-HUGO (https://gohugo.io) generates this side statically."/>
+HUGO (https://gohugo.io) generates this side statically. I investigated two systems: JEKILL and HUGO, however JEKILL utilizes Ruby and HUGO uses Golang. Because I lack considerable expertise in both, my preferred guideline is to take what you or your team is most experienced with, which didn’t work here. Because Go seemed promising, I chose to devote my efforts to HUGO.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2019-05-10T22:18:20+01:00">
+    <meta property="article:modified_time" content="2019-05-10T22:18:20+01:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How This Site Made and Site Generators">
+<meta name="twitter:description" content="The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far
+from flawless.
+For a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable
+not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting
+provider).
+HUGO (https://gohugo.io) generates this side statically. I investigated two systems: JEKILL and HUGO, however JEKILL
+utilizes Ruby and HUGO uses Golang. Because I lack considerable expertise in both, my preferred guideline is to take
+what you or your team is most experienced with, which didn&rsquo;t work here. Because Go seemed promising, I chose to devote
+my efforts to HUGO.">
 
 
 <script type="application/ld+json">
@@ -111,7 +113,7 @@ HUGO (https://gohugo.io) generates this side statically."/>
   "@type": "BlogPosting",
   "headline": "How This Site Made and Site Generators",
   "name": "How This Site Made and Site Generators",
-  "description": "The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.\nFor a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).\nHUGO (https://gohugo.io) generates this side statically.",
+  "description": "The older I become, the less I seek for the most innovative answers. Some solutions should suffice, even if they are far from flawless.\nFor a website with dynamic material, such as a blog or personal page, generation is not required. Also, it is preferable not to pay wherever possible (there is always a better place to use your money than Amazon or your domestic hosting provider).\nHUGO (https://gohugo.io) generates this side statically. I investigated two systems: JEKILL and HUGO, however JEKILL utilizes Ruby and HUGO uses Golang. Because I lack considerable expertise in both, my preferred guideline is to take what you or your team is most experienced with, which didn\u0026rsquo;t work here. Because Go seemed promising, I chose to devote my efforts to HUGO.\n",
   "keywords": [
     
   ],
@@ -157,7 +159,7 @@ HUGO (https://gohugo.io) generates this side statically."/>
         <div class="logo">
             <a href="https://alex-y-su.github.io/" accesskey="h" title="Alex Su ⌗ personal (Alt + H)">Alex Su ⌗ personal</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -177,8 +179,6 @@ HUGO (https://gohugo.io) generates this side statically."/>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -212,8 +212,7 @@ utilizes Ruby and HUGO uses Golang. Because I lack considerable expertise in bot
 what you or your team is most experienced with, which didn&rsquo;t work here. Because Go seemed promising, I chose to devote
 my efforts to HUGO.</p>
 <p>This is my decision tree, along with my reason for utilizing or not using site generator:</p>
-<p><img loading="lazy" src="//alex-y-su.github.io/img/posts/post-1-diagram.png" alt="Decision tree"  />
-</p>
+<p><img alt="Decision tree" loading="lazy" src="//alex-y-su.github.io/img/posts/post-1-diagram.png"></p>
 
 
   </div>
@@ -226,7 +225,8 @@ my efforts to HUGO.</p>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://alex-y-su.github.io/">Alex Su ⌗ personal</a></span>
+        <span>&copy; 2025 <a href="https://alex-y-su.github.io/">Alex Su ⌗ personal</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

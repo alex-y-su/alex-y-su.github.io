@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alex-y-su.github.io/</loc>
-    <lastmod>2024-03-11T04:42:20+08:00</lastmod>
+    <lastmod>2025-03-09T18:32:00-07:00</lastmod>
+  </url><url>
+    <loc>https://alex-y-su.github.io/posts/open-manus-analysis/</loc>
+    <lastmod>2025-03-09T18:32:00-07:00</lastmod>
   </url><url>
     <loc>https://alex-y-su.github.io/posts/</loc>
-    <lastmod>2024-03-11T04:42:20+08:00</lastmod>
+    <lastmod>2025-03-09T18:32:00-07:00</lastmod>
   </url><url>
     <loc>https://alex-y-su.github.io/posts/how-to-code-for-llm/</loc>
     <lastmod>2024-03-11T04:42:20+08:00</lastmod>
@@ -48,6 +51,8 @@
     <lastmod>2019-05-10T22:18:20+01:00</lastmod>
   </url><url>
     <loc>https://alex-y-su.github.io/categories/</loc>
+  </url><url>
+    <loc>https://alex-y-su.github.io/social/</loc>
   </url><url>
     <loc>https://alex-y-su.github.io/tags/</loc>
   </url>
